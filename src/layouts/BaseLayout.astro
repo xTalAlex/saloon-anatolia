@@ -1,0 +1,27 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+import Footer from "../partials/Footer.astro";
+---
+
+<html lang="it" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Saloon Anatolia</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Germania+One&family=Rye&display=swap"
+            rel="stylesheet"
+        />
+        <ViewTransitions />
+    </head>
+    <body class="">
+        <slot />
+        <Footer />
+    </body>
+</html>

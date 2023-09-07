@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+
+import entrata from "../assets/images/entrata.jpeg";
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={[ 'relative overflow-hidden rounded-3xl' , className]}>
+    <Image class="h-full w-full object-cover transition duration-300 z-10"
+        src={entrata}
+        alt="Saloon Anatolia"  
+        draggable="false"
+        id="tour-cover"
+    />
+    <button class="z-50 btn btn-lg btn-primary uppercase text-3xl rounded-3xl absolute bottom-10 inset-x-0 w-fit mx-auto" id="tour-button"
+        onclick="shopTourToggle()"
+    >Visita il ristorante</button>
+
+    <iframe class="absolute inset-0 opacity-0 h-full w-full object-cover transition duration-300 z-0"
+        src="https://www.google.com/maps/embed?pb=!4v1693882358747!6m8!1m7!1sCAoSLEFGMVFpcE9fXy1vVjc4UWdVbkttUVNnaEd3M0FkWkpxcThvUHZWd2I3Nzhp!2m2!1d45.818811037641!2d8.8434800497015!3f321.326373323541!4f-10.241357252214655!5f0.7820865974627469"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        id="tour-iframe"
+    ></iframe>
+</div>
+
+<script>
+    if(!window.shopTourToggle) {
+        window.shopTourToggle = function () {
+            var button = document.getElementById('tour-button');
+            var cover = document.getElementById('tour-cover');
+            var iframe = document.getElementById('tour-iframe');
+            if(!cover?.classList.contains('opacity-0')){
+                iframe?.classList.remove('opacity-0');
+                cover?.classList.add('opacity-0');
+                button.innerHTML = "Chiudi";
+            }
+            else{
+                iframe?.classList.add('opacity-0');
+                cover?.classList.remove('opacity-0');
+                button.innerHTML = "Visita il ristorante";
+            }
+        };
+    }
+</script>
