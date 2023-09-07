@@ -5,17 +5,27 @@ import PinDropIcon from "../components/icons/PinDropIcon.astro";
 
 import heroBG from "../assets/images/grill.jpeg";
 import bullHead from "../assets/images/bullhead.png";
+import Separator from "@components/Separator.astro";
 ---
 
 <div class="flex flex-col min-h-screen">
-    <div
-        class="hero overflow-hidden grid place-items-center bg-cover flex-1 bg-center"
-        style={`background-image: url(${heroBG.src})`}
-    >
+    <div class="hero overflow-hidden grid place-items-center bg-cover flex-1 bg-center" style={`background-image: url(${heroBG.src})`}>
+
         <div class="hero-overlay bg-opacity-80 bg-base-100"></div>
+
         <div class="hero-content container max-w-[90rem] text-center text-base-content w-full space-x-0 space-y-20 flex-col cursor-default pt-20">
 
-            <div class="flex w-full">
+            <div class="flex w-full xl:hidden">
+                <div class="mx-auto">
+                    <div class="font-display text-6xl sm:text-8xl max-w-xl text-primary neon-primary"
+                    >SALOON ANATOLIA</div>
+                    <Image class="-mt-4 md:-mt-6 w-full scale-125 mx-auto neon-secondary"
+                        src={bullHead}
+                        alt="Saloon Anatolia"
+                    />
+                </div>
+            </div>
+            <div class="xl:flex w-full hidden">
                 <div class="mt-10 font-display text-7xl text-primary neon-primary w-1/3 text-center"
                 >SALOON</div>
                 <div class="mx-auto -mt-10 w-1/3">
@@ -26,11 +36,11 @@ import bullHead from "../assets/images/bullhead.png";
                         alt="Saloon Anatolia"
                     />
                 </div>
-                <div class="ml-6 mt-10 font-display text-7xl text-primary neon-primary w-1/3 text-center"
+                <div class="ml-6 mt-10 font-display text-7xl text-primary neon-primary w-1/3 text-center mr-6"
                 >ANATOLIA</div>
             </div>
 
-            <div class="font-sans flex justify-between max-w-3xl w-full items-center">
+            <div class="font-sans hidden lg:flex justify-between max-w-3xl w-full items-center">
                 <div class="badge badge-outline bg-base-100 border-4 text-3xl h-10 px-4"
                 >PIZZERIA</div>
                 <div class="badge badge-outline bg-base-100 border-4 text-3xl h-10 px-4"
@@ -42,26 +52,26 @@ import bullHead from "../assets/images/bullhead.png";
             </div>
 
             <div class="">
-                <a href="#" class="text-3xl btn btn-lg btn-primary rounded-3xl">SCOPRI IL MENU</a>
+                <a href="#" class="text-3xl btn btn-lg btn-primary mb-5">SCOPRI IL MENU</a>
             </div>
         
         </div>
     </div>
     
     
-    <div class="w-full h-3 bg-secondary"></div>
+    <Separator />
     
-    <div class="w-full h-32 bg-primary text-base-content flex justify-center space-x-20 items-center px-32">
-        <div class="text-right">
-            <a href="#" class="btn btn-neutral duration-700 delay-100 btn-outline rounded-3xl btn-lg px-4 h-16 text-4xl min-h-min bg-base-100 border-4"
+    <div class="flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 2xl:space-x-20 py-10 bg-primary px-4 lg:space-x-5 xl:space-x-10 justify-center">
+        <div class="order-1 w-full sm:w-2/3 lg:w-full 2xl:w-auto">
+            <a href="#" class="w-full overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-4xl min-h-min bg-base-100 border-4"
             >PRENOTA UN TAVOLO</a>
         </div>
-        <div class="justify-center flex items-center text-3xl text-primary-content">
+        <div class="order-3 lg:order-2 justify-center flex items-center text-2xl xl:text-3xl text-primary-content lg:w-full 2xl:w-auto">
             <PinDropIcon class="fill-secondary h-12" />
             <p>Varese, Viale Belforte 93</p>
         </div>
-        <div class="text-left">
-            <a href="#" class="btn btn-neutral duration-700 delay-100 btn-outline rounded-3xl btn-lg px-4 h-16 text-4xl min-h-min bg-base-100 border-4"
+        <div class="order-2 lg:order-3 w-full sm:w-2/3 lg:w-full 2xl:w-auto">
+            <a href="#" class="w-full overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-4xl min-h-min bg-base-100 border-4"
             >ORDINA ONLINE</a>
         </div>
     </div>

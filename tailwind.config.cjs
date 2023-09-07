@@ -45,6 +45,10 @@ module.exports = {
 					"accent": "#16a34a",
 					"neutral": "#a67847",
 					"base-100": "#000000",
+
+					"--rounded-btn": "1.5rem",
+					"--rounded-badge": "1.5rem",
+					"--btn-text-case": "uppercase"
 				},
 			},
 		],
