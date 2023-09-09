@@ -18,17 +18,18 @@ module.exports = {
 			const colors = theme('colors');
 			for (const color in colors) {
 				if (typeof colors[color] == 'object' ){
-					const color1= colors[color]['500'];
-					const color2 = colors[color]['500'];
+					const color1= colors[color]['700'];
+					const color2 = colors[color]['300'];
 					neonUtilities[`.neon-${color}`] = {
 						textShadow: `0 0 10px ${color1}, 0 0 20px ${color2}`,
+						filter: `drop-shadow(2px 4px 10px  ${color1.replace('<alpha-value>','0.5')})`,
 					}
 				}
 				else{
 					const color1= colors[color];
 					neonUtilities[`.neon-${color}`] = {
 						textShadow: `0 0 5px ${color1.replace('<alpha-value>','0.5')}, 0 0 10px ${color1.replace('<alpha-value>','0.7')}`,
-						filter: `drop-shadow(10px 10px 20px  ${color1.replace('<alpha-value>','0.5')})`,
+						filter: `drop-shadow(2px 4px 10px  ${color1.replace('<alpha-value>','0.5')})`,
 					}
 				}
 			}
