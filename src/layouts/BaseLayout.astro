@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 
 import Footer from "../partials/Footer.astro";
+import Banner from "@partials/Banner.astro";
 ---
 
 <html lang="it" class="scroll-smooth">
@@ -21,6 +22,7 @@ import Footer from "../partials/Footer.astro";
         <ViewTransitions />
     </head>
     <body class="">
+        <Banner />
         <slot />
         <Footer />
     </body>
