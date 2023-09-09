@@ -1,11 +1,13 @@
 ---
 import ShopTour from "@components/ShopTour.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../partials/Hero.astro"
+import Hero from "../partials/Hero.astro";
+import WiFiIcon from "@components/icons/WiFiIcon.astro";
+import DeliverooIcon from "@components/icons/DeliverooIcon.astro";
+import JustEatIcon from "@components/icons/JustEatIcon.astro";
 ---
 
 <BaseLayout>
-
 	<Hero />
 
 	<div class="my-20 md:pb-52">
@@ -13,15 +15,32 @@ import Hero from "../partials/Hero.astro"
 			RISTORANTE PIZZERIA KEBAB <br /> A VARESE
 		</h1>
 
-		<ShopTour class="lg:float-right mr-5 ml-5 lg:ml-auto lg:mr-20 2xl:mr-44 mt-12 lg:-mt-72 h-[40rem] lg:w-96 2xl:w-[40rem] rounded-3xl"/>
-		
+		<ShopTour
+			class="lg:float-right mr-5 ml-5 lg:ml-auto lg:mr-20 2xl:mr-44 mt-12 lg:-mt-72 h-[40rem] lg:w-96 2xl:w-[40rem] rounded-3xl"
+		/>
+
 		<div class="grid place-items-center mt-20 text-3xl">
-			<ul class="list-disc">
+			<ul>
 				<li>Orari</li>
-				<li>WiFi Gratuito</li>
 				<li>Prenotazioni</li>
-				<li>A domicilio Justead e Deliveroo</li>
 				<li>Menu</li>
+				<li>
+					<div class="card glass w-44 font-mono">
+						<div class="card-body py-2 justify-center items-center uppercase text-xl">
+							<div>FREE</div>
+							<WiFiIcon class=" h-20" />
+							<div>ZONE</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="https://deliveroo.it/it/menu/varese/varese/saloon-anatolia-risto-pizza-e-kebab">
+						<DeliverooIcon class="w-64"/>
+					</a>
+					<a href="https://www.justeat.it/restaurants-saloon-anatolia---pizzeria-kebab-grill-21100/menu">
+						<JustEatIcon class="w-64"/>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>
