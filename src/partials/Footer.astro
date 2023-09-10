@@ -17,10 +17,10 @@ import InstagramIcon from "@components/icons/InstagramIcon.astro";
     <nav class="order-2 md:order-3 xl:order-2">
         <header class="footer-title font-display opacity-100">Contatti</header>
         <div>
-            <strong>Telefono:</strong> +39 348 1397971
+            <strong>Telefono:</strong> <a href="tel:+393481397971">+39 348 1397971</a>
         </div>
-        <div>
-            <strong>Email:</strong> info@saloonanatolia.com
+        <div class="hidden">
+            <strong>Email:</strong> <a href="mailto:info@saloonanatolia.com">info@saloonanatolia.com</a>
         </div>
     </nav>
     <nav class="order-3 md:order-2 xl:order-3 xl:justify-self-center">
@@ -31,7 +31,7 @@ import InstagramIcon from "@components/icons/InstagramIcon.astro";
             ><InstagramIcon class="h-12" /></a>
             <a href="#"
                 aria-label="Profilo Facebook"
-            ><FacebookIcon class="h-12 p-1 -mt-px" /></a>
+            ><FacebookIcon class="h-12 p-1 -mt-px hidden" /></a>
         </div>
     </nav>
     <nav class="w-full order-4">

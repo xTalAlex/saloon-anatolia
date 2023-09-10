@@ -1,8 +1,9 @@
 ---
-import ShopTour from "@components/ShopTour.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Hero from "@partials/Hero.astro";
 import Contacts from "@partials/Contacts.astro";
+import Menu from "@partials/Menu.astro";
+import ShopTour from "@components/ShopTour.astro";
 import WiFiIcon from "@components/icons/WiFiIcon.astro";
 import TVIcon from "@components/icons/TVIcon.astro";
 import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
@@ -25,7 +26,7 @@ import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
 						Siamo aperti tutti i giorni dalle 11 alle 23.
 					</p>
 					<p>
-						<a class="link" href="#contacts">Chiamaci</a> per prentare un tavolo per te e i tuoi amici o la tua famiglia!
+						<a class="link" href="#contacts">Chiamaci</a> per ordinare da asporto o prenotare un tavolo!
 					</p>
 				</div>
 				<div class="divider"></div>
@@ -33,19 +34,19 @@ import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
 					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
 						<div class="card-body h-full w-full px-2 md:px-4 py-0 justify-center items-center uppercase text-base">
 							<WiFiIcon class="md:h-16 md:w-16 h-full w-full" title="WiFi" />
-							<div class="-mt-2 hidden md:block">WiFi</div>
+							<div class="-mt-2 hidden md:block font-bold">WiFi</div>
 						</div>
 					</div>
 					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
 						<div class="card-body h-full w-full px-1 md:px py-0 justify-center items-center uppercase text-base">
 							<TVIcon class="md:h-16 md:w-16 h-full w-full" title="TV"/>
-							<div class="-mt-2 hidden md:block">TV</div>
+							<div class="-mt-2 hidden md:block font-bold">TV</div>
 						</div>
 					</div>
 					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
 						<div class="card-body h-full w-full px-1 md:px py-0 justify-center items-center uppercase text-base">
 							<FoodDeliveryIcon class="md:h-16 md:w-16 h-full w-full" title="Delivery"/>
-							<div class="-mt-2 hidden md:block">Delivery</div>
+							<div class="-mt-2 hidden md:block font-bold">Delivery</div>
 						</div>
 					</div>
 				</div>
@@ -54,8 +55,9 @@ import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
 				<ShopTour class="h-[40rem] w-full rounded-3xl"/>
 			</div>
 		</div>
-
 	</div>
+
+	<Menu />
 
 	<Contacts />
 </BaseLayout>
