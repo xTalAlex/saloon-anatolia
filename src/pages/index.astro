@@ -29,23 +29,23 @@ import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
 					</p>
 				</div>
 				<div class="divider"></div>
-				<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mx-auto w-fit">
-					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
-						<div class="card-body py-0 justify-center items-center uppercase text-base">
-							<WiFiIcon class="w-16 h-16" />
-							<div class="-mt-2">WiFi</div>
+				<div class="flex flex-row space-x-4 mx-auto w-fit flex-wrap">
+					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+						<div class="card-body h-full w-full px-2 md:px-4 py-0 justify-center items-center uppercase text-base">
+							<WiFiIcon class="md:h-16 md:w-16 h-full w-full" title="WiFi" />
+							<div class="-mt-2 hidden md:block">WiFi</div>
 						</div>
 					</div>
-					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
-						<div class="card-body py-0 justify-center items-center uppercase text-base">
-							<TVIcon class="w-16 h-16" />
-							<div class="-mt-2">TV</div>
+					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+						<div class="card-body h-full w-full px-1 md:px py-0 justify-center items-center uppercase text-base">
+							<TVIcon class="md:h-16 md:w-16 h-full w-full" title="TV"/>
+							<div class="-mt-2 hidden md:block">TV</div>
 						</div>
 					</div>
-					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
-						<div class="card-body py-0 justify-center items-center uppercase text-base">
-							<FoodDeliveryIcon class="w-16 h-16" />
-							<div class="-mt-2">Delivery</div>
+					<div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+						<div class="card-body h-full w-full px-1 md:px py-0 justify-center items-center uppercase text-base">
+							<FoodDeliveryIcon class="md:h-16 md:w-16 h-full w-full" title="Delivery"/>
+							<div class="-mt-2 hidden md:block">Delivery</div>
 						</div>
 					</div>
 				</div>
