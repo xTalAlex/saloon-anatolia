@@ -1,0 +1,41 @@
+---
+import DeliverooIcon from "@components/icons/DeliverooIcon.astro";
+import JustEatIcon from "@components/icons/JustEatIcon.astro";
+import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
+---
+
+<div class="container mx-auto py-44 px-4 sm:px-10">
+    <h2 class="mb-32 text-5xl lg:text-center font-display text-primary uppercase" id="contacts">Scegli come Ordinare</h2>
+    <div class="flex flex-col space-y-20 lg:space-y-0 lg:flex-row justify-between items-center">
+        <div>
+            <a
+                class="btn h-fit text-5xl font-bold font-cursive text-accent w-fit mt-5 whitespace-nowrap"
+                href="tel:+393481397971"
+                aria-label="Ordina telefonando"
+            >
+                <span class="">
+                    <TelephoneIcon class="h-20 inline" />
+                     3481397971
+                </span>
+            </a>
+        </div>
+        <div>
+            <a
+                class="w-fit btn h-fit"
+                href="https://deliveroo.it/it/menu/varese/varese/saloon-anatolia-risto-pizza-e-kebab"
+                aria-label="Ordina con Deliveroo"
+            >
+                <DeliverooIcon class="w-72" />
+            </a>
+        </div>
+        <div>
+            <a
+                class="w-fit btn h-fit"
+                href="https://www.justeat.it/restaurants-saloon-anatolia---pizzeria-kebab-grill-21100/menu"
+                aria-label="Ordina con JustEat"
+            >
+                <JustEatIcon class="w-72" />
+            </a>
+        </div>
+    </div>
+</div>

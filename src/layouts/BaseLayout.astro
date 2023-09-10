@@ -1,10 +1,11 @@
 ---
 import '@fontsource/germania-one';
 import '@fontsource/rye';
+import '@fontsource/palanquin';
 
 import { ViewTransitions } from "astro:transitions";
 
-import Footer from "../partials/Footer.astro";
+import Footer from "@partials/Footer.astro";
 import Banner from "@partials/Banner.astro";
 ---
 
@@ -18,7 +19,7 @@ import Banner from "@partials/Banner.astro";
 
         <ViewTransitions />
     </head>
-    <body class="">
+    <body class="font-sans text-2xl">
         <Banner />
         <slot />
         <Footer />

@@ -7,7 +7,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'display': ['Rye'],
-				'sans': ['Germania One']
+				'cursive': ['Germania One'],
+				'sans': ['Palanquin'],
 			},
 		}
 	},
@@ -18,18 +19,18 @@ module.exports = {
 			const colors = theme('colors');
 			for (const color in colors) {
 				if (typeof colors[color] == 'object' ){
-					const color1= colors[color]['700'];
-					const color2 = colors[color]['300'];
+					const color1= colors[color]['500'];
+					const color2 = colors[color]['800'];
 					neonUtilities[`.neon-${color}`] = {
-						textShadow: `0 0 10px ${color1}, 0 0 20px ${color2}`,
-						filter: `drop-shadow(2px 4px 10px  ${color1.replace('<alpha-value>','0.5')})`,
+						textShadow: `0 0 5px ${color1}, -6px 2px 8px ${color2}`,
+						filter: `drop-shadow(-6px 2px 8px  ${color2.replace('<alpha-value>','1')})`,
 					}
 				}
 				else{
 					const color1= colors[color];
 					neonUtilities[`.neon-${color}`] = {
-						textShadow: `0 0 5px ${color1.replace('<alpha-value>','0.5')}, 0 0 10px ${color1.replace('<alpha-value>','0.7')}`,
-						filter: `drop-shadow(2px 4px 10px  ${color1.replace('<alpha-value>','0.5')})`,
+						textShadow: `0 0 5px ${color1.replace('<alpha-value>','1')}, -6px 2px 8px ${color1.replace('<alpha-value>','0.3')}`,
+						filter: `drop-shadow(-6px 2px 8px  ${color1.replace('<alpha-value>','0.3')})`,
 					}
 				}
 			}
@@ -41,7 +42,7 @@ module.exports = {
 		themes: [
 			{
 				saloon: {
-					"primary": "#eab308",
+					"primary": "#ffd700",
 					"secondary": "#e52f1b",
 					"accent": "#16a34a",
 					"neutral": "#a67847",

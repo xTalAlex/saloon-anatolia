@@ -1,54 +1,61 @@
 ---
 import ShopTour from "@components/ShopTour.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../partials/Hero.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@partials/Hero.astro";
+import Contacts from "@partials/Contacts.astro";
 import WiFiIcon from "@components/icons/WiFiIcon.astro";
-import DeliverooIcon from "@components/icons/DeliverooIcon.astro";
-import JustEatIcon from "@components/icons/JustEatIcon.astro";
-import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
+import TVIcon from "@components/icons/TVIcon.astro";
+import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
 ---
 
 <BaseLayout>
 	<Hero />
 
-	<div class="my-20 md:pb-52">
-		<h1 class="font-sans text-7xl container max-w-3xl md:max-w-xl xl:max-w-2xl text-center mx-auto lg:ml-0 md:px-20 2xl:ml-32 md:mt-32">
-			RISTORANTE PIZZERIA KEBAB <br /> A VARESE
-		</h1>
-
-		<ShopTour
-			class="lg:float-right mr-5 ml-5 lg:ml-auto lg:mr-20 mt-12 lg:-mt-72 2xl:-mt-52 h-[40rem] lg:w-96 2xl:w-[40rem] rounded-3xl"
-		/>
-
-		<div class="grid place-items-center mt-20 text-3xl">
-			<ul>
-				<li>Orari</li>
-				<li>Menu</li>
-				<li>
-					<div class="card glass w-44 font-mono rounded-3xl">
-						<div class="card-body py-2 justify-center items-center uppercase text-xl">
-							<div>FREE</div>
-							<WiFiIcon class=" h-20" />
-							<div>ZONE</div>
+	<div class="my-20 container mx-auto px-4 sm:px-10">
+		<div class="grid lg:grid-cols-2 lg:gap-24 sm:pt-32">
+			<div class="lg:text-center space-y-24">
+				<h1 class="uppercase font-display text-primary text-5xl leading-tight">
+					Il miglior Kebab <br> di Varese
+				</h1>
+				<div class="space-y-1">
+					<p>
+						Vieni a trovarci nel nostro ristorante in <a class="link" target="_blank" href="https://www.google.com/maps/dir//Viale+Belforte,+93,+21100+Varese+VA/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x478680902632c075:0xa5d9261dd64b152?sa=X&ved=2ahUKEwiWsIGetp6BAxWLhv0HHZ3uAEAQwwV6BAgQEAA&ved=2ahUKEwiWsIGetp6BAxWLhv0HHZ3uAEAQwwV6BAgSEAQ">Viale Belforte 93</a>. 
+					</p>
+					<p>
+						Siamo aperti tutti i giorni dalle 11 alle 23.
+					</p>
+					<p>
+						<a class="link" href="#contacts">Chiamaci</a> per prentare un tavolo per te e i tuoi amici o la tua famiglia!
+					</p>
+				</div>
+				<div class="divider"></div>
+				<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mx-auto w-fit">
+					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
+						<div class="card-body py-0 justify-center items-center uppercase text-base">
+							<WiFiIcon class="w-16 h-16" />
+							<div class="-mt-2">WiFi</div>
 						</div>
 					</div>
-				</li>
-				<li><span class="neon-primary"><TelephoneIcon class="h-20 text-primary neon-primary"/></span></li>
-				<li>
-					<a href="https://deliveroo.it/it/menu/varese/varese/saloon-anatolia-risto-pizza-e-kebab"
-						aria-label="Ordina con Deliveroo"
-						class="neon-teal"
-					>
-						<DeliverooIcon class="w-64"/>
-					</a>
-					<a href="https://www.justeat.it/restaurants-saloon-anatolia---pizzeria-kebab-grill-21100/menu"
-						aria-label="Ordina con JustEat"
-						class="neon-orange"
-					>
-						<JustEatIcon class="w-64"/>
-					</a>
-				</li>
-			</ul>
+					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
+						<div class="card-body py-0 justify-center items-center uppercase text-base">
+							<TVIcon class="w-16 h-16" />
+							<div class="-mt-2">TV</div>
+						</div>
+					</div>
+					<div class="card border-4 h-28 w-28 rounded-3xl mx-auto">
+						<div class="card-body py-0 justify-center items-center uppercase text-base">
+							<FoodDeliveryIcon class="w-16 h-16" />
+							<div class="-mt-2">Delivery</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mt-32 lg:mt-0">
+				<ShopTour class="h-[40rem] w-full rounded-3xl"/>
+			</div>
 		</div>
+
 	</div>
+
+	<Contacts />
 </BaseLayout>
