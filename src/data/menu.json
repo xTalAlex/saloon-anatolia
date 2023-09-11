@@ -1,0 +1,262 @@
+{
+    "menu": [
+        {
+            "name" : "Kebab",
+            "content": [
+                {
+                    "name": "Panino Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Piadina Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Panino Falafel",
+                    "description": ""
+                },
+                {
+                    "name": "Calzone Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Box Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Piatto Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Piatto Falafel",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "Grill",
+            "content": [
+                {
+                    "name": "Misto Grill",
+                    "description": ""
+                },
+                {
+                    "name": "Costata",
+                    "description": ""
+                },
+                {
+                    "name": "Agnello",
+                    "description": ""
+                },
+                {
+                    "name": "Bistecca",
+                    "description": ""
+                },
+                {
+                    "name": "Spiedini Riso e Patate",
+                    "description": ""
+                },
+                {
+                    "name": "Petto di Pollo",
+                    "description": ""
+                },
+                {
+                    "name": "Kavurna",
+                    "description": ""
+                },
+                {
+                    "name": "Kofte",
+                    "description": ""
+                },
+                {
+                    "name": "Adana",
+                    "description": ""
+                },
+                {
+                    "name": "Kanat",
+                    "description": ""
+                },
+                {
+                    "name": "Kuzu Shish",
+                    "description": ""
+                },
+                {
+                    "name": "Pirzola",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "Pizze",
+            "content": [
+                {
+                    "name": "Marinara",
+                    "description": ""
+                },
+                {
+                    "name": "Margherita",
+                    "description": ""
+                },
+                {
+                    "name": "Vegetariana",
+                    "description": ""
+                },
+                {
+                    "name": "4 Stagioni",
+                    "description": ""
+                },
+                {
+                    "name": "Wurstel e Patatine",
+                    "description": ""
+                },
+                {
+                    "name": "Salsiccia",
+                    "description": ""
+                },
+                {
+                    "name": "Napoli",
+                    "description": ""
+                },
+                {
+                    "name": "Diavola",
+                    "description": ""
+                },
+                {
+                    "name": "Cotto",
+                    "description": ""
+                },
+                {
+                    "name": "Crudo",
+                    "description": ""
+                },
+                {
+                    "name": "Funghi",
+                    "description": ""
+                },
+                {
+                    "name": "Tonnoe e Cipolla",
+                    "description": ""
+                },
+                {
+                    "name": "Speck",
+                    "description": ""
+                },
+                {
+                    "name": "4 Formaggi",
+                    "description": ""
+                },
+                {
+                    "name": "Delicata",
+                    "description": ""
+                },
+                {
+                    "name": "Valtellina",
+                    "description": ""
+                },
+                {
+                    "name": "Frutti di Mare",
+                    "description": ""
+                },
+                {
+                    "name": "Bufala",
+                    "description": ""
+                },
+                {
+                    "name": "Kebab",
+                    "description": ""
+                },
+                {
+                    "name": "Selvi",
+                    "description": ""
+                },
+                {
+                    "name": "Della Casa",
+                    "description": ""
+                },
+                {
+                    "name": "Belforte",
+                    "description": ""
+                },
+                {
+                    "name": "Fantasia",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "Panini & Insalate",
+            "content": [
+                {
+                    "name": "Panino Hamburger",
+                    "description": ""
+                },
+                {
+                    "name": "Panino Cotoletta",
+                    "description": ""
+                },
+                {
+                    "name": "Panino Wrustel",
+                    "description": ""
+                },
+                {
+                    "name": "Hot Dog",
+                    "description": ""
+                },
+                {
+                    "name": "Insalata di Tonno",
+                    "description": ""
+                },
+                {
+                    "name": "Insalatona Mista",
+                    "description": ""
+                }
+            ] 
+        },
+        {
+            "name": "Fritti",
+            "content": [
+                {
+                    "name": "Piatto Bandidos",
+                    "description": ""
+                },
+                {
+                    "name": "Piatto Cotoletta",
+                    "description": ""
+                },
+                {
+                    "name": "Alette di Pollo",
+                    "description": ""
+                },
+                {
+                    "name": "Anelli di Cipolla",
+                    "description": ""
+                },
+                {
+                    "name": "Patatine Fritte",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "Dolci",
+            "content": [
+                {
+                    "name": "Baklava",
+                    "description": ""
+                },
+                {
+                    "name": "Sütlaç",
+                    "description": ""
+                },
+                {
+                    "name": "Kadayıf",
+                    "description": ""
+                },
+                {
+                    "name": "Revani",
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}

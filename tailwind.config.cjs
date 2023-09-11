@@ -30,7 +30,7 @@ module.exports = {
 					const color1= colors[color];
 					neonUtilities[`.neon-${color}`] = {
 						textShadow: `0 0 5px ${color1.replace('<alpha-value>','1')}, -6px 2px 8px ${color1.replace('<alpha-value>','0.3')}`,
-						filter: `drop-shadow(-6px 2px 8px  ${color1.replace('<alpha-value>','0.3')})`,
+						filter: `drop-shadow(-6px 2px 8px  ${color1.replace('<alpha-value>','0.5')})`,
 					}
 				}
 			}

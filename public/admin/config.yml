@@ -1,0 +1,41 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://saloonanatolia.netlify.app"
+display_url: "https://saloonanatolia.netlify.app"
+logo_url: "https://saloonanatolia.netlify.app/favicon.svg"
+locale: "it"
+
+collections:
+  - name: "settings"
+    label: "Impostazioni"
+    files:
+      - name: "site_config"
+        label: "Configurazione Sito"
+        file: "src/site_config.json"
+        editor:
+          preview: false
+        fields:
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Sottotitolo", name: "subtitle", widget: "string" }
+          - { label: "Motto", name: "motto", widget: "string"}
+          - { label: "Descrizione", name: "description", widget: "text"}
+          - { label: "CTA", name: "cta", widget: "string" }
+  - name: "menu"
+    label: "Menu"
+    files:
+      - name: "menu"
+        label: "Menu"
+        file: "src/data/menu.json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Nome", name: "text", widget: "string"}
+          - { label: "Descrizione", name: "description", widget: "text"}

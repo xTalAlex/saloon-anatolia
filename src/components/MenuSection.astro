@@ -1,0 +1,21 @@
+---
+const { title, class: className } = Astro.props;
+---
+
+<div class:list={[className]}>
+
+    <h2 class="text-3xl text-left font-display uppercase">{title}</h2>
+
+    <div class="mt-10">
+
+        <div class="float-left h-64 flex-none w-fit">
+            <slot name="menu-image"/>
+        </div>
+
+        <slot />
+
+    </div>
+
+    <div class="divider"></div>
+
+</div>

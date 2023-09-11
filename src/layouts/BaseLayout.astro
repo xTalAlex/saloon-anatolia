@@ -17,6 +17,12 @@ import Banner from "@partials/Banner.astro";
         <meta name="generator" content={Astro.generator} />
         <title>Saloon Anatolia</title>
 
+        <script>
+            import netlifyIdentity from "netlify-identity-widget";
+            window.netlifyIdentity = netlifyIdentity;
+            netlifyIdentity.init();
+        </script>
+
         <ViewTransitions />
     </head>
     <body class="font-sans text-2xl">

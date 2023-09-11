@@ -1,20 +1,46 @@
 ---
+import { Image } from "astro:assets";
 
+import kebab from "@assets/images/ui/kebab.png";
+import MenuSection from "@components/MenuSection.astro";
+
+import { menu } from "@data/menu.json";
 ---
 
 <div class="container py-44 mx-auto px-4 sm:px-10">
-    <h2 class="mb-32 text-5xl lg:text-center font-display text-primary uppercase"
+    <h2 class="mb-32 text-5xl text-center font-display text-primary uppercase"
         id="menu"
     >
         Menu
     </h2>
 
     <div class="flex w-full justify-center">
-        <div class="tabs font-cursive justify-between w-full max-w-xl">
-            <a class="text-2xl uppercase font-bold tab">Pizzeria</a>
-            <a class="text-2xl uppercase font-bold tab tab-active">Kebab</a>
-            <a class="text-2xl uppercase font-bold tab">Grill</a>
+        <div class="tabs tabs-boxed font-cursive justify-between w-full max-w-4xl">
+            {
+                menu.map( section => 
+                    <a class="text-2xl uppercase font-bold tab ">{section.name}</a>
+                )
+            }
         </div>
+    </div>
+
+    <div class="flex font-cursive max-w-5xl mx-auto mt-32 w-full flex-wrap hidden">
+        {
+            menu.map( section => {
+                return (
+                    <MenuSection title={section.name} class="w-1/2 flex-none px-6">
+                        <div class="relative h-full" slot="menu-image">
+                            <Image src={kebab} class="h-full w-fit object-contain neon-primary" alt={`Menu ${section.name}`}/>
+                        </div>
+                        <ul>
+                            {section.content?.map( item =>
+                                <li>{ item.name }</li>
+                            )}
+                        </ul>
+                    </MenuSection>
+                )
+            })
+        }
     </div>
 
 </div>
