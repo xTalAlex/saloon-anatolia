@@ -21,14 +21,15 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
     <div class="mb-32 px-4 flex flex-col md:flex-row mx-auto font-cursive w-full space-y-5 md:space-y-0 md:space-x-10 items-center justify-center">
         {
             menuGroups.map((group) => (
-                <a
+                <span
                     href={`#${slugify(group)}`}
                     class={`${
                         group == selectedGroup ? "btn-active" : ""
-                    } w-full sm:w-2/3 md:w-auto overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-3xl min-h-min bg-base-100 border-4`}
+                    } menu-button w-full sm:w-2/3 md:w-auto overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-3xl min-h-min bg-base-100 border-4`}
+                    onclick={`window.menuSwap('${slugify(group)}')`}
                 >
                     {group}
-                </a>
+                </span>
             ))
         }
     </div>
@@ -37,7 +38,9 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
         menuGroups.map( group => 
                 {
                     return (
-                     <div class="" id={`${slugify(group)}`}>
+                     <div class={`menu-group flex flex-wrap justify-center transition duration-1000 ${ group == selectedGroup ? '' : 'hidden'}`}
+                          id={`${slugify(group)}`}
+                     >
                         {
                             menu.filter( section => section.group == group)
                                 .map( section => {
@@ -45,7 +48,7 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                                         <MenuSection
                                             title={section.name}
                                             id={slugify(section.name)}
-                                            class="h-fit"
+                                            class="h-fit max-w-2xl w-full px-10"
                                         >
                                             <div
                                                 class="hidden relative h-full"
@@ -70,6 +73,26 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                     )
                 }
             )
-    
     }
 </div>
+
+<script>
+    if(!window.menuSwap){
+        window.menuSwap = (id, el) => {
+            var buttons = document.getElementsByClassName("menu-button");
+            var groups = document.getElementsByClassName("menu-group");
+            Array.from(buttons).forEach(function (button) {
+                if(button != el) button.classList.remove('btn-active');
+                else if (!button.classList.contains('btn-active')) button.classList.add('btn-active');
+            });
+            Array.from(groups).forEach(function (group) {
+                if( group.id == id ){
+                    group.classList.remove('hidden');
+                }
+                else {
+                    if(!group.classList.contains('hidden')) group.classList.add('hidden')
+                }
+            });
+        }
+    }
+</script>
