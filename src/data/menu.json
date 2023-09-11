@@ -2,7 +2,7 @@
     "menu": [
         {
             "name" : "Kebab",
-            "column" : 1,
+            "group": "Kebab & Grill",
             "content": [
                 {
                     "name": "Panino Kebab",
@@ -36,7 +36,7 @@
         },
         {
             "name": "Grill",
-            "column" : 1,
+            "group": "Kebab & Grill",
             "content": [
                 {
                     "name": "Misto Grill",
@@ -90,7 +90,7 @@
         },
         {
             "name": "Pizze",
-            "column" : 2,
+            "group": "Pizze",
             "content": [
                 {
                     "name": "Marinara",
@@ -188,7 +188,7 @@
         },
         {
             "name": "Panini & Insalate",
-            "column" : 2,
+            "group": "Kebab & Grill",
             "content": [
                 {
                     "name": "Panino Hamburger",
@@ -218,7 +218,7 @@
         },
         {
             "name": "Fritti",
-            "column" : 1,
+            "group": "Kebab & Grill",
             "content": [
                 {
                     "name": "Piatto Bandidos",
@@ -244,7 +244,7 @@
         },
         {
             "name": "Dolci",
-            "column" : 1,
+            "group": "Dolci & Bevande",
             "content": [
                 {
                     "name": "Baklava",

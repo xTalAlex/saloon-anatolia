@@ -28,6 +28,7 @@ collections:
             allow_add: true
             fields:
               - { label: "Nome", name: "name", widget: "string"}
+              - { label: "Gruppo", name: "group", widget: "string"}
               - { label: "Descrizione", name: "description", widget: "text", required: false}
               - { label: "Colonna", name: "column", widget: "number", default: 1, min: 1, max: 2, step: 1}
               - label: "Contenuto"
@@ -49,6 +50,11 @@ collections:
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Titolo", name: "title", widget: "string" }
           - { label: "Sottotitolo", name: "subtitle", widget: "string" }
-          - { label: "Motto", name: "motto", widget: "string"}
+          - { label: "Motto", name: "motto", widget: "string", required: false}
           - { label: "Descrizione", name: "description", widget: "text"}
-          - { label: "CTA", name: "cta", widget: "string" }
+          - { label: "Telefono", name: "phone", widget: "string"}
+          - { label: "Mail", name: "email", widget: "string", required: false}
+          - { label: "Deliveroo", name: "deliveroo", widget: "string", required: false}
+          - { label: "JustEat", name: "justeat", widget: "string", required: false}
+          - { label: "Maps Link", name: "maps_link", widget: "string"}
+

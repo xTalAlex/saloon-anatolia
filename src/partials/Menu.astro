@@ -7,63 +7,69 @@ import kebab from "@assets/images/ui/kebab.png";
 import MenuSection from "@components/MenuSection.astro";
 
 import { menu } from "@data/menu.json";
+
+const menuGroups = Array.from(new Set(menu.map((section) => section.group)));
+
+const { selectedGroup = menuGroups[0] } = Astro.props;
 ---
 
-<div class="container py-44 mx-auto px-4 sm:px-10">
+<div class="container pt-40 mx-auto px-4 sm:px-0">
     <h2 class="mb-32 text-5xl text-center font-display text-primary uppercase"
         id="menu"
-    >
-        Menu
-    </h2>
+    >Menu</h2>
 
-    <div class="flex w-full justify-center">
-        <div class="tabs tabs-boxed font-cursive justify-between w-full max-w-4xl">
-            {
-                menu.map( section => 
-                    <a href={`#${slugify(section.name)}`} class="text-2xl uppercase font-bold tab ">{section.name}</a>
-                )
-            }
-        </div>
+    <div class="mb-32 px-4 flex flex-col md:flex-row mx-auto font-cursive w-full space-y-5 md:space-y-0 md:space-x-10 items-center justify-center">
+        {
+            menuGroups.map((group) => (
+                <a
+                    href={`#${slugify(group)}`}
+                    class={`${
+                        group == selectedGroup ? "btn-active" : ""
+                    } w-full sm:w-2/3 md:w-auto overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-3xl min-h-min bg-base-100 border-4`}
+                >
+                    {group}
+                </a>
+            ))
+        }
     </div>
 
-    <div class="grid md:grid-cols-2 font-cursive max-w-5xl mx-auto mt-32 gap-12">
-        <div class="flex flex-col w-full">
-            {
-                menu.filter( section => section.column == 1 ).map( section => {
+    { 
+        menuGroups.map( group => 
+                {
                     return (
-                        <MenuSection title={section.name} id={slugify(section.name)} class="h-fit">
-                            <div class="hidden relative h-full" slot="menu-image">
-                                <Image src={kebab} class="h-full w-fit object-contain neon-primary" alt={`Menu ${section.name}`}/>
-                            </div>
-                            <ul class="space-y-2 uppercase text-2xl tracking-wide">
-                                {section.content?.map( item =>
-                                    <li>{ item.name }</li>
-                                )}
-                            </ul>
-                        </MenuSection>
+                     <div class="" id={`${slugify(group)}`}>
+                        {
+                            menu.filter( section => section.group == group)
+                                .map( section => {
+                                    return (
+                                        <MenuSection
+                                            title={section.name}
+                                            id={slugify(section.name)}
+                                            class="h-fit"
+                                        >
+                                            <div
+                                                class="hidden relative h-full"
+                                                slot="menu-image"
+                                            >
+                                                <Image
+                                                    src={kebab}
+                                                    class="h-full w-fit object-contain neon-primary"
+                                                    alt={`Menu ${section.name}`}
+                                                />
+                                            </div>
+                                            <ul class="space-y-2 uppercase text-2xl tracking-wide">
+                                                {section.content?.map((item) => (
+                                                    <li>{item.name}</li>
+                                                ))}
+                                            </ul>
+                                        </MenuSection>
+                                    )
+                                })
+                        }
+                     </div>
                     )
-                })
-            }
-        </div>
+                }
+            )
     
-        <div class="flex flex-col w-full">
-            {
-                menu.filter( section => section.column == 2 ).map( section => {
-                    return (
-                        <MenuSection title={section.name} id={slugify(section.name)} class="h-fit">
-                            <div class="hidden relative h-full" slot="menu-image">
-                                <Image src={kebab} class="h-full w-fit object-contain neon-primary" alt={`Menu ${section.name}`}/>
-                            </div>
-                            <ul class="space-y-2 uppercase text-2xl tracking-wide">
-                                {section.content?.map( item =>
-                                    <li>{ item.name }</li>
-                                )}
-                            </ul>
-                        </MenuSection>
-                    )
-                })
-            }
-        </div>
-    </div>
-
+    }
 </div>
