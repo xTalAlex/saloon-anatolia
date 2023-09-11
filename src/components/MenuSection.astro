@@ -1,8 +1,8 @@
 ---
-const { title, class: className } = Astro.props;
+const { title, class: className, ...props } = Astro.props;
 ---
 
-<div class:list={[className]}>
+<div class:list={[className]} {...props}>
 
     <h2 class="text-3xl text-left font-display uppercase">{title}</h2>
 

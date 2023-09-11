@@ -13,6 +13,30 @@ logo_url: "https://saloonanatolia.netlify.app/favicon.svg"
 locale: "it"
 
 collections:
+  - name: "menu"
+    label: "Menu"
+    files:
+      - label: "Menu"
+        name: "menu"
+        file: "src/data/menu.json"
+        editor:
+          preview: false
+        fields:
+          - label: "Menu"
+            name: "menu"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Nome", name: "name", widget: "string"}
+              - { label: "Descrizione", name: "description", widget: "text", required: false}
+              - { label: "Colonna", name: "column", widget: "number", default: 1, min: 1, max: 2, step: 1}
+              - label: "Contenuto"
+                name: "content"
+                widget: "list"
+                allow_add: true
+                fields:
+                  - {label: "Nome", name: "name", widget: "string"}
+                  - { label: "Descrizione", name: "description", widget: "text", required: false}
   - name: "settings"
     label: "Impostazioni"
     files:
@@ -28,14 +52,3 @@ collections:
           - { label: "Motto", name: "motto", widget: "string"}
           - { label: "Descrizione", name: "description", widget: "text"}
           - { label: "CTA", name: "cta", widget: "string" }
-  - name: "menu"
-    label: "Menu"
-    files:
-      - name: "menu"
-        label: "Menu"
-        file: "src/data/menu.json"
-        editor:
-          preview: false
-        fields:
-          - { label: "Nome", name: "text", widget: "string"}
-          - { label: "Descrizione", name: "description", widget: "text"}
