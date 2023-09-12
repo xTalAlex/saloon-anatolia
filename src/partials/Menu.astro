@@ -1,13 +1,12 @@
 ---
 import { Image } from "astro:assets";
 
-import { slugify } from "@lib/utils";
-
-import kebab from "@assets/images/ui/kebab.png";
 import MenuSection from "@components/MenuSection.astro";
 
+import { slugify } from "@lib/utils";
 import { menu } from "@data/menu.json";
 
+const allImages = await Astro.glob('../assets/images/*/*.*');
 const menuGroups = Array.from(new Set(menu.map((section) => section.group)));
 
 const { selectedGroup = menuGroups[0] } = Astro.props;
@@ -26,7 +25,7 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                     class={`${
                         group == selectedGroup ? "btn-active" : ""
                     } menu-button w-full sm:w-2/3 md:w-auto overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-3xl min-h-min bg-base-100 border-4`}
-                    onclick={`window.menuSwap('${slugify(group)}')`}
+                    onclick={`window.menuSwap('${slugify(group)}', this)`}
                 >
                     {group}
                 </span>
@@ -38,7 +37,7 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
         menuGroups.map( group => 
                 {
                     return (
-                     <div class={`menu-group flex flex-wrap justify-center transition duration-1000 ${ group == selectedGroup ? '' : 'hidden'}`}
+                     <div class={`menu-group max-w-3xl mx-auto ${ group == selectedGroup ? '' : 'hidden'}`}
                           id={`${slugify(group)}`}
                      >
                         {
@@ -48,21 +47,18 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                                         <MenuSection
                                             title={section.name}
                                             id={slugify(section.name)}
-                                            class="h-fit max-w-2xl w-full px-10"
+                                            class="h-fit w-full px-10"
                                         >
-                                            <div
-                                                class="hidden relative h-full"
-                                                slot="menu-image"
-                                            >
-                                                <Image
-                                                    src={kebab}
-                                                    class="h-full w-fit object-contain neon-primary"
-                                                    alt={`Menu ${section.name}`}
-                                                />
-                                            </div>
-                                            <ul class="space-y-2 uppercase text-2xl tracking-wide">
+                                            {
+                                                allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 ) &&
+                                                <Image class="my-5 sm:my-0 sm:float-right h-64 flex-none w-min object-contain neon-primary" src={ allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 )?.default } alt="" slot="menu-image"/>
+                                            }
+                                            <ul class="space-y-5 uppercase tracking-wide">
                                                 {section.content?.map((item) => (
-                                                    <li>{item.name}</li>
+                                                    <li>
+                                                        <div class="text-2xl">{item.name}</div>
+                                                        <div class="text-base font-sans">{item.description}</div>
+                                                    </li>
                                                 ))}
                                             </ul>
                                         </MenuSection>
