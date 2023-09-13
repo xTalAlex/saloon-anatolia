@@ -51,7 +51,7 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                                         >
                                             {
                                                 allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 ) &&
-                                                <Image class="my-5 sm:my-0 sm:float-right h-64 flex-none w-min object-contain neon-primary" src={ allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 )?.default } alt="" slot="menu-image"/>
+                                                <Image class="rounded-3xl my-5 sm:my-0 sm:float-right h-64 flex-none w-min object-contain neon-primary" src={ allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 )?.default } alt="" slot="menu-image"/>
                                             }
                                             <ul class="space-y-5 uppercase tracking-wide">
                                                 {section.content?.map((item) => (
