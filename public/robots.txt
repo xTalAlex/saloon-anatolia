@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saloonanatolia.netlify.app/sitemap-index.xml

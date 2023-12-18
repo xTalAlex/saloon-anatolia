@@ -11,6 +11,7 @@
     "decap": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource/germania-one": "^5.0.8",
     "@fontsource/palanquin": "^5.0.8",
