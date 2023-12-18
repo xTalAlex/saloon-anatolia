@@ -9,7 +9,7 @@ public_folder: "/uploads"
 
 site_url: "https://saloonanatolia.netlify.app"
 display_url: "https://saloonanatolia.netlify.app"
-logo_url: "https://saloonanatolia.netlify.app/favicon.ico"
+logo_url: "https://saloonanatolia.netlify.app/android-chrome-512x512.png"
 locale: "it"
 
 collections:
