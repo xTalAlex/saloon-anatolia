@@ -6,12 +6,12 @@ const { title, class: className, ...props } = Astro.props;
 
 <div class:list={[className]} {...props}>
     <a href={`#${slugify(title)}`}>
-        <h2 class="text-primary text-5xl text-left font-display uppercase">
+        <h2 class="text-primary text-5xl text-center md:text-left font-display uppercase">
             {title}
         </h2>
     </a>
 
-    <div class="mt-12 font-cursive">
+    <div class="mt-14 font-cursive">
             
         <slot name="menu-image" />
 
