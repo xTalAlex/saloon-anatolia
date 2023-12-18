@@ -13,8 +13,16 @@
                     "description": "Con patatine"
                 },
                 {
+                    "name": "Piadina Anatolia",
+                    "description": ""
+                },
+                {
                     "name": "Panino Falafel",
                     "description": "Con patatine"
+                },
+                {
+                    "name": "Panino Kofte",
+                    "description": ""
                 },
                 {
                     "name": "Calzone Kebab",
@@ -39,23 +47,47 @@
             "group": "Kebab & Grill",
             "content": [
                 {
-                    "name": "Grigliata Mix",
-                    "description": "Pollo, agnello, patate"
+                    "name": "Barbecue Tris Manzo",
+                    "description": "Spezzatino di manzo in padella"
                 },
                 {
-                    "name": "Costata di Manzo alla griglia",
+                    "name": "Barbecue Tris Pollo",
+                    "description": "Spezzatino di pollo in padella"
+                },
+                {
+                    "name": "Arrosticini Abruzzesi con Patatine",
                     "description": ""
                 },
                 {
-                    "name": "Costolette di Agnello alla griglia",
-                    "description": "Con patate e insalata"
+                    "name": "Grigliata Mix",
+                    "description": "Pollo, spiedini di manzo, adana, costolette di agnello, patatine"
+                },
+                {
+                    "name": "Polpette di Manzo",
+                    "description": "Con patatine e insalata"
                 },
                 {
                     "name": "Bistecca di Manzo",
-                    "description": "Con patate"
+                    "description": "Con patatine"
                 },
                 {
-                    "name": "Spiedini di Pollo con Riso e Patate",
+                    "name": "Spiedini di Manzo",
+                    "description": ""
+                },
+                {
+                    "name": "Spezzatino di Pollo con Riso e Patatine",
+                    "description": ""
+                },
+                {
+                    "name": "Agnello Grill",
+                    "description": "Con riso, patatine e insalata"
+                },
+                {
+                    "name": "Adana",
+                    "description": "Carne macinata, riso, spezie, insalata"
+                },
+                {
+                    "name": "Costata di Manzo alla griglia",
                     "description": ""
                 },
                 {
@@ -63,27 +95,33 @@
                     "description": ""
                 },
                 {
-                    "name": "Kavurna",
+                    "name": "Kavurma",
                     "description": "Spezzatino di carne in padella"
                 },
                 {
-                    "name": "Kofte",
-                    "description": "Carne macinata, spezie, patate, insalata"
-                },
+                    "name": "Kavurma Liscio",
+                    "description": "Spezzatino di carne in padella"
+                }
+            ]
+        },
+        {
+            "name": "Pide",
+            "group": "Kebab & Grill",
+            "content": [
                 {
-                    "name": "Adana",
+                    "name": "Manzo e Mozzarella",
                     "description": ""
                 },
                 {
-                    "name": "Kanat",
+                    "name": "Salame Turco",
                     "description": ""
                 },
                 {
-                    "name": "Kuzu Shish",
+                    "name": "Spinaci",
                     "description": ""
                 },
                 {
-                    "name": "Pirzola",
+                    "name": "Kebab e Funghi",
                     "description": ""
                 }
             ]
@@ -94,7 +132,7 @@
             "content": [
                 {
                     "name": "Marinara",
-                    "description": "Pomodor, aglio, olio d'oliva, origano"
+                    "description": "Pomodoro, aglio, olio d'oliva, origano"
                 },
                 {
                     "name": "Margherita",
@@ -102,15 +140,15 @@
                 },
                 {
                     "name": "Vegetariana",
-                    "description": "Pomodoro, mozzarela, verdure grigliate"
-                },
-                {
-                    "name": "4 Stagioni",
-                    "description": "Pomodoro, mozzrella, cotto, funghi, carciofi, olivi"
+                    "description": "Pomodoro, mozzarella, verdure alla griglia"
                 },
                 {
                     "name": "Wurstel e Patatine",
                     "description": "Pomodoro, mozzarella, wurstel, patatine"
+                },
+                {
+                    "name": "4 Stagioni",
+                    "description": "Pomodoro, mozzarella, cotto, funghi, carciofi, olive"
                 },
                 {
                     "name": "Salsiccia",
@@ -122,19 +160,19 @@
                 },
                 {
                     "name": "Diavola",
-                    "description": "Pomodor, mozzarella, salame piccante"
-                },
-                {
-                    "name": "Cotto",
-                    "description": "Pomodoro mozzarella, prosciutto cotto"
+                    "description": "Pomodoro, mozzarella, salame piccante"
                 },
                 {
                     "name": "Crudo",
-                    "description": "Pomodoro mozzarella, prosciutto crudo"
+                    "description": "Pomodoro, mozzarella, prosciutto crudo"
+                },
+                {
+                    "name": "Cotto",
+                    "description": "Pomodoro, mozzarella, prosciutto cotto"
                 },
                 {
                     "name": "Funghi",
-                    "description": "Pomodoro, mozzarella funghi"
+                    "description": "Pomodoro, mozzarella, funghi"
                 },
                 {
                     "name": "Tonno e Cipolla",
@@ -145,49 +183,65 @@
                     "description": "Pomodoro, mozzarella, speck"
                 },
                 {
-                    "name": "4 Formaggi",
-                    "description": "Mozzarella, brie, zola, scamorza"
-                },
-                {
-                    "name": "Delicata",
-                    "description": "Pomodoro, mozzarella, cotto, funghi, brie"
-                },
-                {
-                    "name": "Valtellina",
-                    "description": "Pomodoro, mozzarella, bresaola, grana, rucola"
-                },
-                {
-                    "name": "Frutti di Mare",
-                    "description": "Pomodoro, mozzarella, frutti di mare"
-                },
-                {
-                    "name": "Bufala",
-                    "description": "Pomodoro, mozzarella di bufala"
+                    "name": "Della Casa",
+                    "description": "Pomodoro, mozzarella, bresaola, rucola, pomodorini freschi"
                 },
                 {
                     "name": "Kebab",
                     "description": "Pomodoro, mozzarella, kebab, insalata, pomodorini, cipolla, salse"
                 },
                 {
-                    "name": "Selvi",
-                    "description": "Pomodoro, mozzarella, kebab, spinaci, uova"
+                    "name": "4 Formaggi",
+                    "description": "Mozzarella, brie, zola, scamorza"
                 },
                 {
-                    "name": "Della Casa",
-                    "description": "Pomodoro, mozzarella, bresaola, rucola, pomodorini freschi"
+                    "name": "Delicata",
+                    "description": "Pomodoro, mozzarella, prosciutto cotto, funghi, brie"
+                },
+                {
+                    "name": "Valtellina",
+                    "description": "Pomodoro, mozzarella, bresaola, grana, rucola"
+                },
+                {
+                    "name": "Bufala",
+                    "description": "Pomodoro, mozzarella di bufala"
+                },
+                {
+                    "name": "Frutti di Mare",
+                    "description": "Pomodoro, mozzarella, frutti di mare"
+                },
+                {
+                    "name": "Cotto e Funghi",
+                    "description": "Pomodoro, mozzarella, prosciutto cotto, funghi"
                 },
                 {
                     "name": "Belforte",
                     "description": "Pomodoro, mozzarella, pollo, peperoni"
                 },
                 {
+                    "name": "Varese",
+                    "description": "Pomodoro, mozzarella, pollo, funghi"
+                },
+                {
+                    "name": "Saloon",
+                    "description": "Pomodoro, mozzarella, pollo, spinaci, rucola"
+                },
+                {
+                    "name": "Anatolia",
+                    "description": "Pomodoro, mozzarella, kebab, funghi, cipolla"
+                },
+                {
                     "name": "Fantasia",
                     "description": "Ingredienti a scelta del pizzaiolo"
+                },
+                {
+                    "name": "Calzone Helen",
+                    "description": "Pomodoro, mozzarella, cotto, funghi, carciofi"
                 }
             ]
         },
         {
-            "name": "Panini & Insalate",
+            "name": "Panini & Piatti",
             "group": "Kebab & Grill",
             "content": [
                 {
@@ -211,8 +265,24 @@
                     "description": ""
                 },
                 {
-                    "name": "Insalatona Mista",
+                    "name": "Piatto Bandidos",
+                    "description": "Con insalata e patatine"
+                },
+                {
+                    "name": "Piatto Anatolia",
                     "description": ""
+                },
+                {
+                    "name": "Piatto Cotoletta",
+                    "description": "Con insalata e patatine"
+                },
+                {
+                    "name": "Piatto Wurstel e Patatine",
+                    "description": "Con insalata e patatine"
+                },
+                {
+                    "name": "Piatto Hamburger di Pollo",
+                    "description": "Con insalata e patatine"
                 }
             ] 
         },
@@ -221,12 +291,8 @@
             "group": "Kebab & Grill",
             "content": [
                 {
-                    "name": "Piatto Bandidos",
-                    "description": "Con insalata e patatine"
-                },
-                {
-                    "name": "Piatto Cotoletta",
-                    "description": "Con insalata e patate"
+                    "name": "Misto Fritto",
+                    "description": ""
                 },
                 {
                     "name": "Alette di Pollo",
@@ -235,6 +301,22 @@
                 {
                     "name": "Anelli di Cipolla",
                     "description": "5 pezzi"
+                },
+                {
+                    "name": "Bastoncini di Pesce",
+                    "description": ""
+                },
+                {
+                    "name": "Fagottini",
+                    "description": "3 pezzi"
+                },
+                {
+                    "name": "Nuggets di Pollo",
+                    "description": "6 pezzi"
+                },
+                {
+                    "name": "Stick di Mozzrella",
+                    "description": ""
                 },
                 {
                     "name": "Patatine Fritte",
@@ -251,15 +333,19 @@
                     "description": ""
                 },
                 {
-                    "name": "Sütlaç",
-                    "description": ""
-                },
-                {
                     "name": "Kadayıf",
                     "description": ""
                 },
                 {
-                    "name": "Revani",
+                    "name": "Cheescake",
+                    "description": ""
+                },
+                {
+                    "name": "Profitterol",
+                    "description": ""
+                },
+                {
+                    "name": "Tiramisù",
                     "description": ""
                 }
             ]
@@ -269,20 +355,52 @@
             "group": "Dolci & Bevande",
             "content": [
                 {
-                    "name": "Birra",
-                    "description": "Ichnus, Heineken, Moretti da 33 o 66cl"
-                },
-                {
                     "name": "Bibite",
-                    "description": "CocaCola, Fanta, Sprite, ecc.. 33cl"
+                    "description": "CocaCola, Fanta, Sprite, Lemon Soda, Estathe, 33cl"
                 },
                 {
                     "name": "Red Bull",
                     "description": "25cl"
                 },
                 {
-                    "name": "Acqua Naturale",
+                    "name": "Birre 66cl",
+                    "description": "Ichnusa, Heineken, Moretti, Poretti"
+                },
+                {
+                    "name": "Birre 33cl",
+                    "description": "Ichnusa, Heineken, Moretti, Poretti, Corona, Tennent's"
+                },
+                {
+                    "name": "Vino Rosso",
+                    "description": ""
+                },
+                {
+                    "name": "Vino Bianco",
+                    "description": ""
+                },
+                {
+                    "name": "Vecchia Romagna",
+                    "description": ""
+                },
+                {
+                    "name": "Montenegro",
+                    "description": ""
+                },
+                {
+                    "name": "Whisky",
+                    "description": ""
+                },
+                {
+                    "name": "Acqua",
                     "description": "Naturale/Frizzante 50cl"
+                },
+                {
+                    "name": "Caffè",
+                    "description": ""
+                },
+                {
+                    "name": "Ayran",
+                    "description": ""
                 }
             ]
         }

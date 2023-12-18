@@ -10,3 +10,15 @@
 - blog piatti tipici
 - tasto per tornare in cima al menu
 - parole seo
+- recensioni
+- slider piatti foto
+- profilo google maps
+- accesso deliveroo e justeat per gestione menu
+- campagna google
+- colori
+- icone neon
+- astro seo
+- favicon
+- fix menu
+
+- menu panino kebab, piadina kebab, falafel, hamburger, cotoletta
