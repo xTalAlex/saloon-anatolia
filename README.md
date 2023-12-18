@@ -4,17 +4,20 @@
 
 ## TODO
 
-- evidenzia specialitá nel menu
-- immagini dei piatti al passaggio del mouse
 - blog piatti tipici
-- tasto per tornare in cima al menu
 - parole seo
-- recensioni
-- slider piatti foto
+
 - profilo google maps
 - accesso deliveroo e justeat per gestione menu
-- campagna google
+
 - icone neon
-- astro seo
-- fix menu
+- slider piatti foto
+- immagini dei piatti / descrizioni dei piatti / link alle spiegazioni
+- evidenzia specialitá nel menu
+- errori ortografia menu
+
+- recensioni
+
+- campagna google
+
 - menu panino kebab, piadina kebab, falafel, hamburger, cotoletta

@@ -4,6 +4,7 @@ import '@fontsource/rye';
 import '@fontsource/palanquin';
 
 import { SEO } from "astro-seo";
+import entrata from "@assets/images/saloonanatolia.jpg";
 
 import { ViewTransitions } from "astro:transitions";
 
@@ -23,7 +24,18 @@ import Banner from "@partials/Banner.astro";
         <meta name="theme-color" content="#000000">
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Saloon Anatolia</title>
+
+        <SEO
+            title="Saloon Anatolia"
+            description="Ristorante Pizzeria, Kebab, Steakhouse e Grill a Varese in Viale Belforte 93. Specialità Turche e Italiane."
+            openGraph={{
+                basic: {
+                    title: "Ristorante Saloon Anatolia | Pizzeria - Kebab - Steakhouse - Grill",
+                    type: "website",
+                    image: Astro.site?.origin + entrata.src
+                }
+            }}
+        />
 
         <script>
             import netlifyIdentity from "netlify-identity-widget";
