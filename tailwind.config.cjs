@@ -22,15 +22,15 @@ module.exports = {
 					const color1= colors[color]['500'];
 					const color2 = colors[color]['800'];
 					neonUtilities[`.neon-${color}`] = {
-						textShadow: `0 0 5px ${color1}, -6px 2px 8px ${color2}`,
-						filter: `drop-shadow(-6px 2px 8px  ${color2.replace('<alpha-value>','1')})`,
+						textShadow: `0 0 2px ${color1}, -4px 2px 3px ${color2}`,
+						filter: `drop-shadow(-4px 2px 7px  ${color2.replace('<alpha-value>','1')})`,
 					}
 				}
 				else{
 					const color1= colors[color];
 					neonUtilities[`.neon-${color}`] = {
-						textShadow: `0 0 5px ${color1.replace('<alpha-value>','1')}, -6px 2px 8px ${color1.replace('<alpha-value>','0.3')}`,
-						filter: `drop-shadow(-6px 2px 8px  ${color1.replace('<alpha-value>','0.5')})`,
+						textShadow: `0 0 2px ${color1.replace('<alpha-value>','1')}, -4px 2px 3px ${color1.replace('<alpha-value>','0.3')}`,
+						filter: `drop-shadow(-4px 2px 7px  ${color1.replace('<alpha-value>','0.5')})`,
 					}
 				}
 			}

@@ -6,7 +6,6 @@
 
 - evidenzia specialitá nel menu
 - immagini dei piatti al passaggio del mouse
-- offerte menu con bibita
 - blog piatti tipici
 - tasto per tornare in cima al menu
 - parole seo
