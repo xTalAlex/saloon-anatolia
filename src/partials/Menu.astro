@@ -12,12 +12,12 @@ const menuGroups = Array.from(new Set(menu.map((section) => section.group)));
 const { selectedGroup = menuGroups[0] } = Astro.props;
 ---
 
-<div class="container pt-40 mx-auto px-4 sm:px-0">
+<div class="container pt-40 mx-auto px-8">
     <h2 class="mb-32 text-5xl text-center font-display text-primary uppercase"
         id="menu"
     >Menu</h2>
 
-    <div class="mb-32 px-4 flex flex-col md:flex-row mx-auto font-cursive w-full space-y-5 md:space-y-0 md:space-x-10 items-center justify-center">
+    <div class="mb-32 flex flex-col md:flex-row mx-auto font-cursive w-full space-y-5 md:space-y-0 md:space-x-10 items-center justify-center">
         {
             menuGroups.map((group) => (
                 <span
@@ -47,7 +47,7 @@ const { selectedGroup = menuGroups[0] } = Astro.props;
                                         <MenuSection
                                             title={section.name}
                                             id={slugify(section.name)}
-                                            class="h-fit w-full px-10"
+                                            class="h-fit w-full"
                                         >
                                             {
                                                 allImages.find( image => image.default.src.search(`/${slugify(section.name)}`) >= 0 ) &&
