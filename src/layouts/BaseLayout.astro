@@ -3,6 +3,8 @@ import '@fontsource/germania-one';
 import '@fontsource/rye';
 import '@fontsource/palanquin';
 
+import { SEO } from "astro-seo";
+
 import { ViewTransitions } from "astro:transitions";
 
 import Footer from "@partials/Footer.astro";
@@ -12,7 +14,13 @@ import Banner from "@partials/Banner.astro";
 <html lang="it" class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e52f1b">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#000000">
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Saloon Anatolia</title>
