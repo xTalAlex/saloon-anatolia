@@ -8,18 +8,18 @@ import Star from "@components/icons/Star.astro";
 
 <section class=" justify-center items-center container mx-auto pt-20 pb-20 px-8">
 
-    <div class="relative swiper-container w-full mx-auto h-full overflow-hidden">
-        <div class="swiper-wrapper  pb-5">
+    <div class="relative swiper-container w-full mx-auto overflow-hidden">
+        <div class="swiper-wrapper pb-5">
             {
                 reviews.map( review => (
-                    <div class="swiper-slide w-full flex items-center justify-center text-center text-2xl pb-10">
-                        <div class="space-y-5 max-w-lg mx-auto">
-                            <div class="flex jusify-center text-center">
+                    <div class="swiper-slide w-full text-center text-2xl pb-10 my-auto">
+                        <div class="flex flex-col w-full md:max-w-xl mx-auto space-y-5">
+                            <div class="">
                                 { review.content }
                             </div>
                             <div>
                                 <a class="link font-cursive text-xl uppercase link-hover link-primary" href={ review.url } title="Leggi su Google">{ review.name }</a>
-                            </div>
+                            </div>    
                         </div>
                     </div>
                 ))
@@ -34,7 +34,7 @@ import Star from "@components/icons/Star.astro";
                 src={GoogleG} 
                 alt="Recensioni Google"  
             />
-            <div class="flex font-display text-primary">
+            <div class="flex font-display text-primary mt-2">
                 <p class="text-7xl">4.6</p>
                 <p class="text-7xl">/</p>
                 <p class="text-7xl">5</p>  
