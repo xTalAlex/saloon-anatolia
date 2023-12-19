@@ -1,19 +1,21 @@
 {
-    "reviews" : [
-        {
-            "name": "Mariagrazia",
-            "url": "https://maps.app.goo.gl/JiGwWBpfF5LrpfNT9",
-            "content": "Posto che consigliamo vivamente. Io e mia sorella abbiamo preso 3 piatti da asporto + i dolci perché volevamo provare la cucina turca oltre ai soliti kebab. Rimaste molto soddisfatte, sia dal cibo che dal servizio, personale gentilissimo. Il ristorante in se è arredato molto bene ed è piacevole stare lì anche solo per aspettare l'asporto! Consigliatissime le polpette (Kofte) e il piatto falafel!! Ritorneremo sicuramente."
-        },
-        {
-            "name": "Maria",
-            "url": "https://maps.app.goo.gl/dJEt9tLncunwGosT6",
-            "content": "Il kebap sicuramente buonissimo e di ottima qualità ma sono da assaggiare anche i piatti, consiglio in particolare il Kavurma (un piatto di spezzatino di carne speziato e riso). Inoltre il posto è bellissimo e il personale è sempre gentile e disponibile"
-        },
-        {
-            "name": "Iván",
-            "url": "https://maps.app.goo.gl/347rJyF7TphHNYkf9",
-            "content": "Il trattamento e il cibo sono imbattibili. Il posto è molto pulito con un arredamento eccellente. Varietà di piatti e alta qualità ad un prezzo ragionevole."
-        }
-    ]
+  "reviews": [
+    {
+      "name": "Mariagrazia",
+      "url": "https://maps.app.goo.gl/JiGwWBpfF5LrpfNT9",
+      "content": "Posto che consigliamo vivamente. Io e mia sorella abbiamo preso 3 piatti da asporto + i dolci perché volevamo provare la cucina turca oltre ai soliti kebab. Rimaste molto soddisfatte, sia dal cibo che dal servizio, personale gentilissimo. Il ristorante in se è arredato molto bene ed è piacevole stare lì anche solo per aspettare l'asporto! Consigliatissime le polpette (Kofte) e il piatto falafel!! Ritorneremo sicuramente."
+    },
+    {
+      "name": "Maria",
+      "url": "https://maps.app.goo.gl/dJEt9tLncunwGosT6",
+      "content": "Il kebap sicuramente buonissimo e di ottima qualità ma sono da assaggiare anche i piatti, consiglio in particolare il Kavurma (un piatto di spezzatino di carne speziato e riso). Inoltre il posto è bellissimo e il personale è sempre gentile e disponibile"
+    },
+    {
+      "name": "Iván",
+      "url": "https://maps.app.goo.gl/347rJyF7TphHNYkf9",
+      "content": "Il trattamento e il cibo sono imbattibili. Il posto è molto pulito con un arredamento eccellente. Varietà di piatti e alta qualità ad un prezzo ragionevole."
+    }
+  ],
+  "avg_rating": 4.6,
+  "ctr_reviews": 141
 }

@@ -37,7 +37,28 @@ collections:
                 allow_add: true
                 fields:
                   - {label: "Nome", name: "name", widget: "string"}
+                  - {label: "Special", name: "special", widget: "boolean", default: false}
                   - { label: "Descrizione", name: "description", widget: "text", required: false}
+  - name: "reviews"
+    label: "Recensioni"
+    files:
+      - label: "Recensioni"
+        name: "reviews"
+        file: "src/data/reviews.json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Voto medio", name: "avg_rating", widget: "number", value_type: "float", default: 0, min: 0, max: 10, step: 0.1}
+          - { label: "Numero recensioni", name: "ctr_reviews", widget: "number", default: 0, step: 1}
+          - label: "Recensioni"
+            name: "reviews"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Nome", name: "name", widget: "string"}
+              - { label: "URL", name: "url", widget: "string"}
+              - { label: "Voto", name: "rating", widget: "number", value_type: "float", default: 0, min: 0, max: 10, step: 0.1, required: false}
+              - { label: "Contenuto", name: "content", widget: "text"}
   - name: "settings"
     label: "Impostazioni"
     files:
