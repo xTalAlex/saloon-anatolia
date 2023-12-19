@@ -1,0 +1,57 @@
+---
+import ShopTour from "@components/ShopTour.astro";
+import WiFiIcon from "@components/icons/WiFiIcon.astro";
+import TVIcon from "@components/icons/TVIcon.astro";
+import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
+---
+
+<div class="my-20 container mx-auto px-8">
+    <div class="grid lg:grid-cols-2 lg:gap-24 sm:pt-32">
+        <div class="lg:text-center space-y-24">
+            <h1 class="uppercase font-display text-primary text-5xl leading-tight">
+                Il miglior Kebab <br> di Varese
+            </h1>
+            <div class="space-y-1">
+                <p>
+                    Vieni a trovarci nel nostro ristorante in <a class="link font-cursive" target="_blank" href="https://www.google.com/maps/dir/45.7764491,8.8981332/Ristorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill,+Viale+Belforte,+93,+21100+Varese+VA/@45.7936365,8.8314895,13z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!2m2!1d8.8433553!2d45.8187842!3e0?entry=ttu">Viale Belforte 93</a>. 
+                </p>
+                <p>
+                    Siamo aperti tutti i giorni dalle 11 alle 23.
+                </p>
+                <p>
+                    <a class="link font-cursive" href="#contacts">Chiamaci</a> per ordinare da asporto o prenotare un tavolo!
+                </p>
+            </div>
+            <div class="divider"></div>
+            <div class="flex flex-row space-x-4 mx-auto w-fit flex-wrap">
+                <div class="tooltip font-bold tooltip-primary" data-tip="WiFi Gratis">
+                    <div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+                        <div class="card-body h-full w-full px-2 md:px-4 py-0 justify-center items-center uppercase text-base">
+                            <WiFiIcon class="md:h-16 md:w-16 h-full w-full"/>
+                            <div class="-mt-2 hidden md:block font-bold">WiFi</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tooltip font-bold tooltip-primary" data-tip="Televisione">
+                    <div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+                        <div class="card-body h-full w-full px-1 md:px-4 py-0 justify-center items-center uppercase text-base">
+                            <TVIcon class="md:h-16 md:w-16 h-full w-full"/>
+                            <div class="-mt-2 hidden md:block font-bold">TV</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tooltip font-bold tooltip-primary" data-tip="Consegna a somicilio">
+                    <div class="card border-4 h-20 w-20 md:h-28 md:w-28 rounded-3xl">
+                        <div class="card-body h-full w-full px-1 md:px-4 py-0 justify-center items-center uppercase text-base">
+                            <FoodDeliveryIcon class="md:h-16 md:w-16 h-full w-full"/>
+                            <div class="-mt-2 hidden md:block font-bold">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-32 lg:mt-0">
+            <ShopTour class="h-[40rem] w-full rounded-3xl"/>
+        </div>
+    </div>
+</div>

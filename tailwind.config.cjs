@@ -44,7 +44,7 @@ module.exports = {
 				saloon: {
 					"primary": "#ffd700",
 					"secondary": "#e52f1b",
-					"accent": "#16a34a",
+					"accent": "#ffd700",
 					"neutral": "#a67847",
 					"base-100": "#000000",
 

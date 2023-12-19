@@ -37,13 +37,11 @@ const { class: className } = Astro.props;
             var cover = document.getElementById('tour-cover');
             var iframe = document.getElementById('tour-iframe');
             if(iframe?.classList.contains('opacity-0')){
-                iframe?.classList.remove('-z-10');
                 iframe?.classList.remove('opacity-0');
                 button.innerHTML = "Chiudi";
             }
             else{
                 iframe?.classList.add('opacity-0');
-                iframe?.classList.add('-z-10');
                 button.innerHTML = "Visita il ristorante";
             }
         };

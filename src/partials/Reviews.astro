@@ -1,86 +1,71 @@
-<section
-    class="flex justify-center items-center h-screen px-4 py-8 overflow-hidden"
->
-    <div
-        class="w-full mx-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 shadow-xl pb-4"
-    >
-        <h2 class="text-center font-bold text-3xl text-gray-100 py-4">
-            Testimonials
-        </h2>
-        <div class="relative overflow-hidden swiper-container w-full h-full">
-            <div class="swiper-wrapper">
-                <div
-                    class="swiper-slide px-20 flex items-center justify-center"
-                >
-                    <div class="py-4">
-                        <div class="flex justify-center py-4">
-                            <img
-                                alt="profil"
-                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80"
-                                class="mx-auto object-cover rounded-full h-20 w-20"
-                            />
-                        </div>
-                        <div
-                            class="flex jusify-center py-4 md:px-12 text-gray-200 text-center"
-                        >
-                            Great results. Enjoyable to work with, and most
-                            importantly, enabled us to have the presence on the
-                            web we needed to conduct business in today's market.
-                        </div>
-                        <div
-                            class="text-sm flex justify-center text-center font-semibold text-white"
-                        >
-                            Jody Hansen, CEO, Monterey Peninsula Chamber of
-                            Commerce
+---
+import { Image } from "astro:assets";
+import GoogleG from "@assets/images/google_g.png"; 
+
+import { reviews } from "@data/reviews.json";
+import Star from "@components/icons/Star.astro";
+---
+
+<section class=" justify-center items-center container mx-auto pt-20 pb-20 px-8">
+
+    <div class="relative swiper-container w-full mx-auto h-full overflow-hidden">
+        <div class="swiper-wrapper  pb-5">
+            {
+                reviews.map( review => (
+                    <div class="swiper-slide w-full flex items-center justify-center text-center text-2xl pb-10">
+                        <div class="space-y-5 max-w-lg mx-auto">
+                            <div class="flex jusify-center text-center">
+                                { review.content }
+                            </div>
+                            <div>
+                                <a class="link font-cursive text-xl uppercase link-hover link-primary" href={ review.url } title="Leggi su Google">{ review.name }</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="swiper-slide px-20 flex items-center justify-center"
-                >
-                    <div class="py-6">
-                        <div class="flex justify-center py-4">
-                            <img
-                                alt="profil"
-                                src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGF2YXRhcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60"
-                                class="mx-auto object-cover rounded-full h-20 w-20"
-                            />
-                        </div>
-                        <div
-                            class="flex jusify-center py-4 md:px-12 text-gray-200 text-center"
-                        >
-                            Your thoughtfulness and support of MPCC is very much
-                            appreciated. You are a very dear friend to the
-                            Chamber, and I want to assure you that your
-                            confidence in MPCC will be justified.
-                        </div>
-                        <div
-                            class="text-sm flex justify-center text-center font-semibold text-white"
-                        >
-                            Moe Ammar, President, Pacific Grove Chamber of
-                            Commerce
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev text-xs rounded text-white mx-10">
-            </div>
-            <div class="swiper-button-next text-xs rounded text-white mx-10">
+                ))
+            }
+        </div>
+        <div class="z-10 swiper-pagination"></div>
+    </div>
+
+    <div class="w-full mt-20 flex flex-col items-center space-y-20">
+        <div class="flex">
+            <Image class="h-20 w-20 mr-4" 
+                src={GoogleG} 
+                alt="Recensioni Google"  
+            />
+            <div class="flex font-display text-primary">
+                <p class="text-7xl">4.6</p>
+                <p class="text-7xl">/</p>
+                <p class="text-7xl">5</p>  
+                <Star class="hidden sm:block w-20 h-20 text-primary -mt-2 ml-4"/>
             </div>
         </div>
+        <div class="place-self-center">
+            <a class="font-cursive btn btn-lg btn-primary text-3xl"
+                href="https://www.google.com/maps/place/Ristorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill/@45.8187842,8.8407804,17z/data=!3m1!5s0x47868090262fe8dd:0xa2dfaa116960f2a5!4m18!1m9!3m8!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!2sRistorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill!8m2!3d45.8187842!4d8.8433553!9m1!1b1!16s%2Fg%2F11sbp6xwpy!3m7!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!8m2!3d45.8187842!4d8.8433553!9m1!1b1!16s%2Fg%2F11sbp6xwpy?entry=ttu"
+                target="_blank"
+            >Dacci la tua opinione</a>
+        </div>
     </div>
+
 </section>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script is:inline src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script is:inline>
-    var mySwiper = new Swiper(".swiper-container", {
+
+<script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+    const swiper = new Swiper('.swiper-container', {
+        modules: [Navigation, Pagination, Autoplay],
         direction: "horizontal",
         loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true
+        },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
         navigation: {
             nextEl: ".swiper-button-next",
