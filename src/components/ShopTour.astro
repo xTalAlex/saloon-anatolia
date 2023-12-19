@@ -43,6 +43,7 @@ const { class: className } = Astro.props;
             else{
                 iframe?.classList.add('opacity-0');
                 button.innerHTML = "Visita il ristorante";
+                document.body.focus();
             }
         };
     }
