@@ -17,7 +17,7 @@ const { class: className } = Astro.props;
         onclick="shopTourToggle()"
     >Visita il ristorante</button>
 
-    <iframe class="absolute inset-0 opacity-0 h-full w-full object-cover transition duration-300 z-30"
+    <iframe class="absolute inset-0 opacity-0 w-full h-0 object-cover transition duration-300 z-30 pointer-events-none"
         src="https://www.google.com/maps/embed?pb=!4v1693882358747!6m8!1m7!1sCAoSLEFGMVFpcE9fXy1vVjc4UWdVbkttUVNnaEd3M0FkWkpxcThvUHZWd2I3Nzhp!2m2!1d45.818811037641!2d8.8434800497015!3f321.326373323541!4f-10.241357252214655!5f0.7820865974627469"
         width="600"
         height="450"
@@ -37,12 +37,15 @@ const { class: className } = Astro.props;
             var cover = document.getElementById('tour-cover');
             var iframe = document.getElementById('tour-iframe');
             if(iframe?.classList.contains('opacity-0')){
-                iframe?.classList.remove('opacity-0');
+                iframe?.classList.remove('opacity-0','pointer-events-none','h-0');
+                iframe?.classList.add('pointer-events-auto','h-full');
                 button.innerHTML = "Chiudi";
             }
             else{
-                iframe?.classList.add('opacity-0');
+                iframe?.classList.add('opacity-0','pointer-events-none','h-0');
+                iframe?.classList.remove('pointer-events-auto','h-full');
                 button.innerHTML = "Visita il ristorante";
+                button?.focus();
             }
         };
     }
