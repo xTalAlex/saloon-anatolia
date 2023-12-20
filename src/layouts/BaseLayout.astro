@@ -4,24 +4,27 @@ import '@fontsource/germania-one';
 import '@fontsource/rye';
 import '@fontsource/palanquin';
 
-import { SEO } from "astro-seo";
-import entrata from "@assets/images/saloonanatolia.jpg";
+import { SEO } from 'astro-seo';
+import { ViewTransitions } from 'astro:transitions';
 
-import { ViewTransitions } from "astro:transitions";
+import entrata from '@assets/images/saloonanatolia.jpg';
+import BackToTop from '@components/BackToTop.astro';
+import Config from '@config/site_config.json';
+import Footer from '@partials/Footer.astro';
+import Banner from '@partials/Banner.astro';
 
-import Footer from "@partials/Footer.astro";
-import Banner from "@partials/Banner.astro";
+
 ---
 
-<html lang="it" class="scroll-smooth">
+<html lang="it" class="scroll-smooth" id="top">
     <head>
         <SEO
             charset="utf-8"
-            title="Saloon Anatolia"
-            description="Ristorante Pizzeria, Kebab, Steakhouse e Grill a Varese in Viale Belforte 93. Specialità Turche e Italiane."
+            title={Config.title}
+            description={Config.description}
             openGraph={{
                 basic: {
-                    title: "Ristorante Saloon Anatolia | Pizzeria - Kebab - Steakhouse - Grill",
+                    title: `${Config.long_title ?? Config.title} | ${Config.subtitle}`,
                     type: "website",
                     image: Astro.site?.origin + entrata.src
                 }
@@ -55,6 +58,7 @@ import Banner from "@partials/Banner.astro";
     <body class="font-sans text-2xl text-base-content">
         <Banner />
         <slot />
+        <BackToTop />
         <Footer />
     </body>
 </html>

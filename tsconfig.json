@@ -4,6 +4,7 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
+      "@config/*": ["src/config/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@data/*": ["src/data/*"],

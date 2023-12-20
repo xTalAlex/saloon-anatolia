@@ -7,17 +7,17 @@ const { class: className } = Astro.props;
 ---
 
 <div class:list={[ 'relative overflow-hidden' , className]}>
-    <Image class="h-full w-full object-cover transition duration-300 z-40"
+    <Image class="h-full w-full object-cover transition duration-300 z-20"
         src={entrata}
         alt="Saloon Anatolia | Ristorante Pizzeria Steakhouse Grill a Varese"  
         draggable="false"
-        id="tour-cover"
+        id="tourCover"
     />
-    <button class="h-fit z-50 font-cursive btn btn-lg btn-primary text-3xl absolute bottom-10 inset-x-0 w-fit mx-auto" id="tour-button"
+    <button class="h-fit z-30 font-cursive btn btn-lg btn-primary text-3xl absolute bottom-10 inset-x-0 w-fit mx-auto" id="tourButton"
         onclick="shopTourToggle()"
     >Visita il ristorante</button>
 
-    <iframe class="absolute inset-0 opacity-0 w-full h-0 object-cover transition duration-300 z-30 pointer-events-none"
+    <iframe class="absolute inset-0 opacity-0 w-full h-0 object-cover transition duration-300 z-10 pointer-events-none"
         src="https://www.google.com/maps/embed?pb=!4v1693882358747!6m8!1m7!1sCAoSLEFGMVFpcE9fXy1vVjc4UWdVbkttUVNnaEd3M0FkWkpxcThvUHZWd2I3Nzhp!2m2!1d45.818811037641!2d8.8434800497015!3f321.326373323541!4f-10.241357252214655!5f0.7820865974627469"
         width="600"
         height="450"
@@ -26,16 +26,16 @@ const { class: className } = Astro.props;
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="Saloon Anatolia Ristorante Pizzeria Kebab Steakhouse Grill - Photo Sphere"
-        id="tour-iframe"
+        id="tourIframe"
     ></iframe>
 </div>
 
 <script>
     if(!window.shopTourToggle) {
         window.shopTourToggle = function () {
-            var button = document.getElementById('tour-button');
-            var cover = document.getElementById('tour-cover');
-            var iframe = document.getElementById('tour-iframe');
+            var button = document.getElementById('tourButton');
+            var cover = document.getElementById('tourCover');
+            var iframe = document.getElementById('tourIframe');
             if(iframe?.classList.contains('opacity-0')){
                 iframe?.classList.remove('opacity-0','pointer-events-none','h-0');
                 iframe?.classList.add('pointer-events-auto','h-full');

@@ -3,6 +3,7 @@ import ShopTour from "@components/ShopTour.astro";
 import WiFiIcon from "@components/icons/WiFiIcon.astro";
 import TVIcon from "@components/icons/TVIcon.astro";
 import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
+import Config from "@config/site_config.json";
 ---
 
 <div class="my-20 container mx-auto px-8">
@@ -13,7 +14,7 @@ import FoodDeliveryIcon from "@components/icons/FoodDeliveryIcon.astro";
             </h1>
             <div class="space-y-1">
                 <p>
-                    Vieni a trovarci nel nostro ristorante in <a class="link font-cursive" target="_blank" href="https://www.google.com/maps/dir/45.7764491,8.8981332/Ristorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill,+Viale+Belforte,+93,+21100+Varese+VA/@45.7936365,8.8314895,13z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!2m2!1d8.8433553!2d45.8187842!3e0?entry=ttu">Viale Belforte 93</a>. 
+                    Vieni a trovarci nel nostro ristorante in <a class="link font-cursive" target="_blank" href={Config.maps_link}>Viale Belforte 93</a>. 
                 </p>
                 <p>
                     Siamo aperti tutti i giorni dalle 11 alle 23.

@@ -1,23 +1,21 @@
 ---
-import PinDropIcon from "@components/icons/PinDropIcon.astro";
-
 import heroBG from "@assets/images/grill.jpg";
+import PinDropIcon from "@components/icons/PinDropIcon.astro";
 import Separator from "@components/Separator.astro";
 import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
 import JustEatIcon from "@components/icons/JustEatIcon.astro";
 import DeliverooIcon from "@components/icons/DeliverooIcon.astro";
-import BullHead from "../components/BullHead.astro";
+import BullHead from "@components/BullHead.astro";
+import Config from "@config/site_config.json";
 ---
 
 <div class="flex flex-col font-cursive">
-
-    <h1 class="hidden">Ristorante Saloon Anatolia Pizzeria Kebab Steakhouse Grill A Varese</h1>
 
     <div class="hero overflow-hidden grid place-items-center bg-cover flex-1 bg-center" style={`background-image: url(${heroBG.src})`}>
 
         <div class="hero-overlay bg-opacity-80 bg-base-100"></div>
 
-        <div class="hero-content h-full container max-w-[90rem] text-center text-base-content w-full space-x-0 flex-col cursor-default pt-20">
+        <div class="hero-content h-full container max-w-[90rem] text-center text-base-content w-full space-x-0 flex-col cursor-default pt-20 xl:pt-40">
 
             <div class="flex w-full xl:hidden">
                 <div class="mx-auto">
@@ -42,7 +40,7 @@ import BullHead from "../components/BullHead.astro";
                 >ANATOLIA</div>
             </div>
 
-            <div class="hidden lg:flex justify-between max-w-3xl w-full items-center">
+            <div class="hidden lg:flex justify-between max-w-3xl w-full items-center mt-12">
                 <div class="badge badge-outline bg-base-100 border-4 text-3xl h-10 px-4 select-none"
                 >PIZZERIA</div>
                 <div class="badge badge-outline bg-base-100 border-4 text-3xl h-10 px-4 select-none"
@@ -53,7 +51,7 @@ import BullHead from "../components/BullHead.astro";
                 >GRILL</div>
             </div>
 
-            <div class="mt-12 sm:mt-20">
+            <div class="mt-12">
                 <a href="#menu" class="text-3xl btn btn-lg btn-primary mb-5">SCOPRI IL MENU</a>
             </div>
         
@@ -69,7 +67,7 @@ import BullHead from "../components/BullHead.astro";
         </div>
         <div class="order-3 lg:order-2 justify-center flex items-center text-primary-content lg:w-auto">
             <PinDropIcon class="fill-secondary h-12" />
-            <a class="link link-hover font-cursive" target="_blank" href="https://www.google.com/maps/dir/45.7764491,8.8981332/Ristorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill,+Viale+Belforte,+93,+21100+Varese+VA/@45.7936365,8.8314895,13z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!2m2!1d8.8433553!2d45.8187842!3e0?entry=ttu">Varese, Viale Belforte 93</a>
+            <a class="link link-hover font-cursive" target="_blank" href={Config.maps_link}>Varese, Viale Belforte 93</a>
         </div>
         <div class="order-2 lg:order-3 w-full sm:w-2/3 lg:w-auto">
             <button class="w-full overflow-hidden whitespace-nowrap btn btn-neutral duration-700 delay-100 btn-outline btn-lg px-4 h-16 text-3xl min-h-min bg-base-100 border-4"
@@ -79,9 +77,9 @@ import BullHead from "../components/BullHead.astro";
                 <div class="modal-box shadow-2xl border-4 rounded-3xl">
                     <h3 class="font-bold uppercase">Ordina con:</h3>
                     <div class="py-10 items-center justify-center flex flex-col space-y-4">
-                        <a class="btn btn-ghost h-full py-4 px-4" href="https://deliveroo.it/it/menu/varese/varese/saloon-anatolia-risto-pizza-e-kebab"
+                        <a class="btn btn-ghost h-full py-4 px-4" href={Config.deliveroo}
                             aria-label="Ordina con Deliveroo"><DeliverooIcon class="w-64"/></a>
-                        <a class="btn btn-ghost h-full py-4 px-4" href="https://www.justeat.it/restaurants-saloon-anatolia---pizzeria-kebab-grill-21100/menu"
+                        <a class="btn btn-ghost h-full py-4 px-4" href={Config.justeat}
                             aria-label="Ordina con JustEat"><JustEatIcon class="w-64" /></a>
                     </div>
                     <div class="modal-action">

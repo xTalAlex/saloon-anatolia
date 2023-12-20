@@ -2,6 +2,7 @@
 import Separator from "@components/Separator.astro";
 import FacebookIcon from "@components/icons/FacebookIcon.astro";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
+import Config from "@config/site_config.json";
 ---
 
 <Separator />
@@ -16,31 +17,43 @@ import InstagramIcon from "@components/icons/InstagramIcon.astro";
     </nav>
     <nav class="order-2 md:order-3 xl:order-2">
         <header class="footer-title font-display opacity-100">Contatti</header>
-        <div>
-            <strong>Telefono:</strong> <a href="tel:+393481397971">+39 348 1397971</a>
-        </div>
-        <div class="hidden">
-            <strong>Email:</strong> <a href="mailto:info@saloonanatolia.com">info@saloonanatolia.com</a>
-        </div>
+        {
+            Config.phone && 
+            <div>
+                <strong>Telefono:</strong> <a href="tel:+393481397971">+39 { Config.phone }</a>
+            </div>
+        }
+        {
+            Config.email &&
+            <div>
+                <strong>Email:</strong> <a href="mailto:info@saloonanatolia.com">{ Config.email }</a>
+            </div>
+        }
     </nav>
     <nav class="order-3 md:order-2 xl:order-3 xl:justify-self-center">
         <header class="footer-title font-display opacity-100">Social</header>
         <div class="grid grid-flow-col gap-4">
-            <a href="https://www.instagram.com/ristorantesaloonanatolia"
-                aria-label="Profilo Instagram"
-            ><InstagramIcon class="h-12" /></a>
-            <a href="#"
-                aria-label="Profilo Facebook"
-            ><FacebookIcon class="h-12 p-1 -mt-px hidden" /></a>
+            {
+                Config.instagram &&
+                <a href={Config.instagram}
+                    aria-label="Profilo Instagram"
+                ><InstagramIcon class="h-12" /></a>
+            }
+            {
+                Config.facebook &&
+                <a href={Config.facebook}
+                    aria-label="Profilo Facebook"
+                ><FacebookIcon class="h-12 p-1 -mt-px" /></a>
+            }        
         </div>
     </nav>
     <nav class="w-full order-4">
         <div class="relative group h-80 w-full rounded-3xl overflow-hidden border-4 border-base-content p-2 bg-base-100 cursor-pointer">
-            <div class="absolute text-center inset-0 grid place-items-center bg-base-100 z-50 bg-opacity-70 group-hover:bg-opacity-0 transform group-hover:scale-0 rounded-3xl ease-out transition duration-500 delay-200">
+            <div class="absolute text-center inset-0 grid place-items-center bg-base-100 z-40 bg-opacity-70 group-hover:bg-opacity-0 transform group-hover:scale-0 rounded-3xl ease-out transition duration-500 delay-200">
                 <div class="text-base-content">Viale Belforte, 93 <br> 21100 Varese (VA)</div>
             </div>
             <iframe class="group-hover:grayscale-0 transition h-full w-full object-cover rounded-2xl grayscale duration-500 delay-300"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.624199219413!2d8.840780375702854!3d45.81878417108194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786815907ddf9cf%3A0x678473ea1ae1ec01!2sRistorante%20Saloon%20Anatolia%20-%20Pizzeria%2C%20Kebap%2C%20Grill!5e0!3m2!1sit!2sit!4v1693896056472!5m2!1sit!2sit"
+                src={Config.maps_embed}
                 width="600"
                 height="450"
                 style="border:0;"

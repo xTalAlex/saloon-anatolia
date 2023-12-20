@@ -1,5 +1,6 @@
 ---
-// hidden > grid
+import Config from "@config/banner_config.json";
 ---
-
-<div class="hidden h-10 w-full uppercase text-primary-content bg-primary place-items-center">Aperti tutti i giorni</div>
+{
+   Config.active && <div class="grid h-10 w-full font-cursive uppercase text-primary-content bg-primary place-items-center">{Config.message}</div>
+}

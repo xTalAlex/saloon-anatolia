@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import GoogleG from "@assets/images/google_g.png"; 
 
-import { reviews } from "@data/reviews.json";
-import Star from "@components/icons/Star.astro";
+import GoogleG from "@assets/images/google_g.png"; 
+import Review from "@components/icons/Review.astro";
+import reviewsData from "@data/reviews.json";
 ---
 
 <section class=" justify-center items-center container mx-auto pt-20 pb-20 px-8">
@@ -11,7 +11,7 @@ import Star from "@components/icons/Star.astro";
     <div class="relative swiper-container w-full mx-auto overflow-hidden">
         <div class="swiper-wrapper pb-5">
             {
-                reviews.map( review => (
+                reviewsData.reviews.map( review => (
                     <div class="swiper-slide w-full text-center text-2xl pb-10 my-auto">
                         <div class="flex flex-col w-full md:max-w-xl mx-auto space-y-5">
                             <div class="">
@@ -30,23 +30,26 @@ import Star from "@components/icons/Star.astro";
 
     <div class="w-full mt-20 flex flex-col items-center space-y-20">
         <div class="flex">
-            <Image class="h-20 w-20 mr-4" 
+            <div class="flex font-display text-primary mt-2">
+                <Review class="hidden sm:block w-14 h-14 -mt-1 mr-2"/>
+                <p class="text-5xl">{reviewsData.avg_rating}</p>
+                <p class="text-5xl">/</p>
+                <p class="text-5xl">5</p>  
+            </div>
+            <Image class="h-14 w-14 ml-4 mt-1" 
                 src={GoogleG} 
                 alt="Recensioni Google"  
             />
-            <div class="flex font-display text-primary mt-2">
-                <p class="text-6xl">4.6</p>
-                <p class="text-6xl">/</p>
-                <p class="text-6xl">5</p>  
-                <Star class="hidden sm:block w-20 h-20 text-primary -mt-3 ml-4"/>
-            </div>
         </div>
-        <div class="place-self-center">
-            <a class="font-cursive btn btn-lg btn-primary text-2xl"
-                href="https://www.google.com/maps/place/Ristorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill/@45.8187842,8.8407804,17z/data=!3m1!5s0x47868090262fe8dd:0xa2dfaa116960f2a5!4m18!1m9!3m8!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!2sRistorante+Saloon+Anatolia+-+Pizzeria,+Kebap,+Grill!8m2!3d45.8187842!4d8.8433553!9m1!1b1!16s%2Fg%2F11sbp6xwpy!3m7!1s0x4786815907ddf9cf:0x678473ea1ae1ec01!8m2!3d45.8187842!4d8.8433553!9m1!1b1!16s%2Fg%2F11sbp6xwpy?entry=ttu"
-                target="_blank"
-            >Dacci la tua opinione</a>
-        </div>
+        {
+            reviewsData.reviews_link && 
+                <div class="place-self-center">
+                    <a class="font-cursive btn btn-lg btn-primary text-2xl"
+                        href={reviewsData.reviews_link}
+                        target="_blank"
+                    >Dacci la tua opinione</a>
+                </div>
+        }
     </div>
 
 </section>

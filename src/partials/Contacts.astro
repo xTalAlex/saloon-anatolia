@@ -2,6 +2,7 @@
 import DeliverooIcon from "@components/icons/DeliverooIcon.astro";
 import JustEatIcon from "@components/icons/JustEatIcon.astro";
 import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
+import Config from "@config/site_config.json";
 ---
 
 <div class="container mx-auto py-40 px-8">
@@ -15,7 +16,7 @@ import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
             >
                 <span class="">
                     <TelephoneIcon class="h-20 inline" />
-                     3481397971
+                     {Config.phone}
                 </span>
             </a>
             <div class="uppercase text-base text-center mt-3 ml-6">Per asporto e prenotazioni</div>
@@ -23,7 +24,7 @@ import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
         <div>
             <a
                 class="w-fit btn btn-ghost h-full py-4 px-4"
-                href="https://deliveroo.it/it/menu/varese/varese/saloon-anatolia-risto-pizza-e-kebab"
+                href={Config.deliveroo}
                 aria-label="Ordina con Deliveroo"
             >
                 <DeliverooIcon class="w-72" />
@@ -32,7 +33,7 @@ import TelephoneIcon from "@components/icons/TelephoneIcon.astro";
         <div>
             <a
                 class="w-fit btn btn-ghost h-full py-4 px-4"
-                href="https://www.justeat.it/restaurants-saloon-anatolia---pizzeria-kebab-grill-21100/menu"
+                href={Config.justeat}
                 aria-label="Ordina con JustEat"
             >
                 <JustEatIcon class="w-72" />

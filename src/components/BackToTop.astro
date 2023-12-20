@@ -1,0 +1,33 @@
+---
+import TopArrow from "./icons/TopArrow.astro";
+import MenuBook from "./icons/MenuBook.astro";
+---
+
+<div class="transition duration-300 ease-in-out hover:neon-primary hover:bg-base-100 opacity-50 hover:opacity-100 translate-x-96 fixed h-32 z-50 w-16 bottom-5 right-5 rounded-full border-4 border-transparent hover:border-base-content shadow-xl"
+    id="backToTop"
+>
+    <div class="flex flex-col space-y-2 items-center justify-center h-full">
+        <a href="#menu" title="Vai al menu"><MenuBook class="h-10 w-10" /></a>
+        <a href="#top" title="Torna in cima"><TopArrow class="h-10 w-10" /></a>
+    </div>
+</div>
+
+<script is:inline>
+    let backToTopButton = document.getElementById("backToTop");
+
+    function checkScroll() {
+        if (document.documentElement.scrollTop > screen.height) {
+            if (backToTopButton.classList.contains("translate-x-96"))
+                backToTopButton.classList.remove("translate-x-96");
+        } else {
+            backToTopButton.classList.add("translate-x-96");
+        }
+    }
+
+    function goTop() {
+        document.documentElement.scrollTop = 0;
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    backToTopButton.onclick = goTop;
+</script>

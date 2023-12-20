@@ -2,9 +2,8 @@
 import { Image } from "astro:assets";
 
 import MenuSection from "@components/MenuSection.astro";
-
-import { slugify } from "@lib/utils";
 import { menu } from "@data/menu.json";
+import { slugify } from "@lib/utils";
 
 const allImages = await Astro.glob('../assets/images/*/*.*');
 const menuGroups = Array.from(new Set(menu.map((section) => section.group)));

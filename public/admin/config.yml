@@ -30,14 +30,13 @@ collections:
               - { label: "Nome", name: "name", widget: "string"}
               - { label: "Gruppo", name: "group", widget: "string"}
               - { label: "Descrizione", name: "description", widget: "text", required: false}
-              - { label: "Colonna", name: "column", widget: "number", default: 1, min: 1, max: 2, step: 1}
               - label: "Contenuto"
                 name: "content"
                 widget: "list"
                 allow_add: true
                 fields:
                   - {label: "Nome", name: "name", widget: "string"}
-                  - {label: "Special", name: "special", widget: "boolean", default: false}
+                  - {label: "Special", name: "special", widget: "boolean", default: false, required: false}
                   - { label: "Descrizione", name: "description", widget: "text", required: false}
   - name: "reviews"
     label: "Recensioni"
@@ -50,6 +49,7 @@ collections:
         fields:
           - { label: "Voto medio", name: "avg_rating", widget: "number", value_type: "float", default: 0, min: 0, max: 10, step: 0.1}
           - { label: "Numero recensioni", name: "ctr_reviews", widget: "number", default: 0, step: 1}
+          - { label: "Link recensioni", name: "reviews_link", widget: "string", required: false}
           - label: "Recensioni"
             name: "reviews"
             widget: "list"
@@ -58,24 +58,35 @@ collections:
               - { label: "Nome", name: "name", widget: "string"}
               - { label: "URL", name: "url", widget: "string"}
               - { label: "Voto", name: "rating", widget: "number", value_type: "float", default: 0, min: 0, max: 10, step: 0.1, required: false}
-              - { label: "Contenuto", name: "content", widget: "text"}
+              - { label: "Contenuto", name: "content", widget: "text"}           
   - name: "settings"
     label: "Impostazioni"
     files:
       - name: "site_config"
         label: "Configurazione Sito"
-        file: "src/site_config.json"
+        file: "src/config/site_config.json"
         editor:
           preview: false
         fields:
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Titolo Lungo", name: "long_title", widget: "string", required: false }
           - { label: "Sottotitolo", name: "subtitle", widget: "string" }
-          - { label: "Motto", name: "motto", widget: "string", required: false}
           - { label: "Descrizione", name: "description", widget: "text"}
           - { label: "Telefono", name: "phone", widget: "string"}
           - { label: "Mail", name: "email", widget: "string", required: false}
+          - { label: "Instagram", name: "instagram", widget: "string", required: false}
+          - { label: "Facebook", name: "facebook", widget: "string", required: false}
           - { label: "Deliveroo", name: "deliveroo", widget: "string", required: false}
           - { label: "JustEat", name: "justeat", widget: "string", required: false}
           - { label: "Maps Link", name: "maps_link", widget: "string"}
+          - { label: "Maps Embed", name: "maps_embed", widget: "string"}
+      - name: "banner_config"
+        label: "Banner Avviso"
+        file: "src/config/banner_config.json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Messaggio", name: "message", widget: "string", required: false}
+          - { label: "Attivo", name: "active", widget: "boolean", default: false }
 
