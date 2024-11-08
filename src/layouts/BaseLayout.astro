@@ -34,7 +34,8 @@ import Banner from '@partials/Banner.astro';
                     { name:"viewport" , content: "width=device-width" },
                     { name:"generator" , content: Astro.generator },
                     { name:"msapplication-TileColor", content: "#000000" },
-                    { name:"theme-color", content: "#000000" }
+                    { name:"theme-color", content: "#000000" },
+                    { name:"robots", content: "noindex,nofollow" } // staging mode
                 ],
                 link: [
                     { rel:"apple-touch-icon", sizes:"180x180", href:"/apple-touch-icon.png" },
